@@ -21,6 +21,7 @@ body {
   font-family: var(--fuentePrincipal);
   font-size: 1.6rem;
   line-height: 1.8;
+  background-color: #f2f2f2;
 }
 h1,
 h2,
