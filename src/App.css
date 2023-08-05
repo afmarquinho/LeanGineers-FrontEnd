@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,900&display=swap");
+
+:root {
+  --primario: #6a1b9a;
+  --secondary: #dc9feb;
+  --cyan: #00bcd4;
+  --negro: #000000;
+  --fuentePrincipal: "Nunito Sans", sans-serif;
+  --fuenteLogo: "Nunito Sans", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: var(--fuentePrincipal);
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+h1,
+h2,
+h3 {
+  font-weight: 900;
+  margin: 2rem 0;
+}
+h1 {
+  font-size: 2rem;
+  font-family: var(--fuenteLogo);
+  color: var(--primario);
+  font-weight: bold;
+}
+h2 {
+  font-size: 4.6rem;
+}
+h3 {
+  font-size: 3rem;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* //*GLOBAL UTILITIES */
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 90%;
+}
+.d-flex {
+  display: flex;
+}
+
+.d-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.justify-btw {
+  justify-content: space-between;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-evn {
+  justify-content: space-evenly;
+}
+.justify-center{
+  justify-content: center;
+}
+.aln-center {
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+.bg-primario {
+  background-color: var(--primario);
+}
+.bg-secundario {
+  background-color: var(--secondary);
+}
+.m-0 {
+  margin: 0;
+}
+.p-0 {
+  padding: 0;
+}
+.m-0-auto {
+  margin: 0 auto;
+}
+.text-white {
+  color: white;
+}
+.text-black {
+  color: black;
+}
+.text-primario {
+  color: var(--primario);
+}
+.wdt-100 {
+  width: 100%;
+}
+.hgt-100{
+  height: 100%;
+}
+.ovf-hidden{
+  overflow: hidden;
+}
+.fst-italic{
+  font-style: italic;
+}
+.obj-fit-cover{
+object-fit: cover;
+}
+
