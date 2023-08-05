@@ -125,3 +125,14 @@ img {
 object-fit: cover;
 }
 
+
+
+/* NAVBAR */
+@media (max-width: 768px) {
+  .scaled1 {
+    transform: scaleX(1);
+  }
+  .scaled0 {
+    transform: scaleX(0);
+  }
+}

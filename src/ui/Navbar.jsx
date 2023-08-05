@@ -13,7 +13,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <GrandContainer className="container-fluid p-0" style={{ transform: `scaleX(${mostrarMenu ? 1 : 0})` }}>
+      <GrandContainer className = {`container-fluid p-0 ${mostrarMenu ? "scaled1" : "scaled0"}`}>
         <Row className="row bg-primario m-0-auto">
           <div className="col-auto">
             <div className="logo">
@@ -111,8 +111,10 @@ const Navbar = () => {
 export default Navbar;
 
 const GrandContainer = styled.div`
-  transition: transform 0.5s ease;
-  transform-origin: right;
+position: sticky;
+top: 0;
+z-index:900;
+  
 `;
 
 const Ul = styled.ul`
