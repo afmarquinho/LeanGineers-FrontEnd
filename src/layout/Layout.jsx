@@ -7,8 +7,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Contacto />
-      <Navbar />
       <Main>{children}</Main>
+      <Navbar />
     </>
   );
 };
