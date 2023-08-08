@@ -1,23 +1,31 @@
 import Layout from "./layout/Layout";
 import foto from "./assets/imagen1.jpg";
 import styled from "@emotion/styled";
-import Cards from "./components/Cards";
+import { Cards, Cards2 } from "./components";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <>
       <Layout>
-        <ImgContenedor className="img-contenedor m-0 p-0 wdt-100">
-          <img
-            src={foto}
-            alt="banner"
-            className=" wdt-100 hgt-100 obj-fit-cover"
-          />
-          <div className="texto wdt-100 hgt-100">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <>
+          <ImgContenedor className="img-contenedor m-0 p-0 wdt-100">
+            <img
+              src={foto}
+              alt="banner"
+              className=" wdt-100 hgt-100 obj-fit-cover"
+            />
+            <div className="texto wdt-100 hgt-100">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+          </ImgContenedor>
+          <Cards />
+          <Cards2 />
+          <div className="container d-flex justify-arnd">
+            <H4 className="m-0">Listo para empezar</H4>
+            <StyledLink to="#">Cóntactanos</StyledLink>
           </div>
-        </ImgContenedor>
-        <Cards />
+        </>
       </Layout>
     </>
   );
@@ -32,12 +40,12 @@ const ImgContenedor = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
     background: linear-gradient(
       to top,
       rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.7)30% 70%,
+      rgba(0, 0, 0, 0.7) 30% 70%,
       rgba(0, 0, 0, 0)
     );
     display: flex;
@@ -47,12 +55,11 @@ const ImgContenedor = styled.div`
     @media (min-width: 768px) {
       padding: 5rem 30rem;
       background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.5)30% 70%,
-      rgba(0, 0, 0, 0)
-    );
-      
+        to top,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.5) 30% 70%,
+        rgba(0, 0, 0, 0)
+      );
     }
     p {
       color: white;
@@ -71,3 +78,15 @@ const ImgContenedor = styled.div`
     }
   }
 `;
+
+const H4 = styled.h4`
+  font-size: 3rem;
+  font-weight: bold;
+`;
+const StyledLink = styled(Link)`
+font-size: 2rem;
+background-color: #5050e7;
+font-weight: bold;
+color: white;
+padding: 0.5rem 1rem;
+border-radius: 4px;`;

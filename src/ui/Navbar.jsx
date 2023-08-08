@@ -44,7 +44,7 @@ const Navbar = () => {
                 <li className="text-center" onClick={onChange}>
                   <Link to="#" className="link recursos">
                     {" "}
-                    <span>Recuersos</span>
+                    <span>Recursos</span>
                   </Link>
                 </li>
                 <li className="text-center" onClick={onChange}>
@@ -113,8 +113,7 @@ export default Navbar;
 const GrandContainer = styled.div`
 position: sticky;
 top: 0;
-z-index:900;
-  
+z-index:900;  
 `;
 
 const Ul = styled.ul`

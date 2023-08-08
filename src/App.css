@@ -125,6 +125,14 @@ img {
 object-fit: cover;
 }
 
+/* SPECIFIC UTULITIES */
+.flx-reverse{
+  flex-direction: row-reverse;
+}
+.justify-arnd{
+  justify-content: space-around;
+}
+
 
 
 /* NAVBAR */

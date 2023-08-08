@@ -5,11 +5,11 @@ import Navbar from "../ui/Navbar";
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <div m-0 p-0>
       <Contacto />
       <Main>{children}</Main>
       <Navbar />
-    </>
+    </div>
   );
 };
 
