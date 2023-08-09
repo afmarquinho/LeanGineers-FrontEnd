@@ -60,7 +60,7 @@ const Navbar = () => {
                   </Link>
                 </li> */}
                 <li className="text-center" onClick={onChange}>
-                  <Contacto to="#" className="link contacto">
+                  <Contacto to="/contactanos" className="link contacto">
                     {" "}
                     <span>Contacto</span>
                   </Contacto>

@@ -1,29 +1,96 @@
 import styled from "@emotion/styled";
-import Contacto from "../ui/Contacto";
-import Navbar from "../ui/Navbar";
+import Layout from "../layout/Layout";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Layout = ({ children }) => {
+const ContactPage = () => {
+  const [nombre, setNombre] = useState("");
+  const [email, setEmail] = useState("");
+  const [asunto, setAsunto] = useState("");
+  const [mensaje, setMensaje] = useState("");
+  const [alerta, setAlerta] = useState("");
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if ([nombre, email, asunto, mensaje].includes("")) {
+      setAlerta("Diligencie todos los campos");
+
+      return;
+    }
+    setAlerta("");
+    //TODO: ENVIAR AL BACKEND
+    console.log("pasó la validación");
+  };
   return (
-    <>
-      <Contacto />
-      <Main>
-        {children}
-        <Footer className="container-fluid">
-          <hr className="my-5" />
-          <div className="row bg-primario py-3 px-3 px-md-5">
-            <div className=" col-6 col-md order-2 order-md-1 d-flex justify-start text-white">
-              <Ul>
-                <li>Conócenos</li>
-                <li>Colabora con nosotros</li>
-                <li>Buzón de felicitaciones, sugerencias y quejas</li>
-                <li>Nosotros</li>
-              </Ul>
+    <Layout>
+      <>
+        <Container className="container p-5;">
+          <div className="row">
+            <div className="col-12">
+              <H2 className="text-center">Contactanos</H2>
             </div>
-            <div className=" col-12 col-md order-1 order-md-2center my-4 my-md-2">
-              <H3 className="text-center m-0 p-0 text-white">LEENGINERS</H3>
-              <hr className="text-white" />
-              <div className="botones m-0 p-0 d-flex justify-center align-top">
+          </div>
+          <div className="row">
+            <DatosContacto className="col-12 col-md-4 datos-contacto my-5 my-md-0 order-2 order-md-1">
+              <div className="correo font-bold">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25"
+                  />
+                </svg>
+                correo@correo.com
+              </div>
+              <div className="localizacion font-bold">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
+                  />
+                </svg>
+                kra ### calle ###, ciudad, país.
+              </div>
+              <div className="telefonos font-bold">
+                {" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                  />
+                </svg>
+                (000)1234567- (000)1234567
+              </div>
+              <br />
+              <div className="my-2 font-bold">
+                También encuentranos en: <br />
                 <StyledLink>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -111,83 +178,133 @@ const Layout = ({ children }) => {
                   </svg>
                 </StyledLink>
               </div>
-            </div>
-            <div className="col-6 col-md order-3 d-flex justify-end text-white">
-              {" "}
-              <Ul>
-                <li>Política de privacidad</li>
-                <li>Informacion legal</li>
-              </Ul>
+            </DatosContacto>
+            <div className="col-12 col-md-8  formulario order-1 order-md-1">
+              <Form action="" onSubmit={onSubmit} className="">
+                {alerta && <Alerta>{alerta}</Alerta>}
+                <div className="input-group d-flex-column">
+                  <label htmlFor="nombre">Nombre</label>
+                  <input
+                    type="text"
+                    name="nombre"
+                    id="nombre"
+                    value={nombre}
+                    onChange={(e) => setNombre(e.target.value)}
+                  />
+                </div>
+                <div className="input-group d-flex-column">
+                  <label htmlFor="email">Correo Electrónico</label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div className="input-group d-flex-column">
+                  <label htmlFor="asunto">Asunto</label>
+                  <input
+                    type="text"
+                    name="asunto"
+                    id="asunto"
+                    value={asunto}
+                    onChange={(e) => setAsunto(e.target.value)}
+                  />
+                </div>
+                <div className="input-group d-flex-column">
+                  <label htmlFor="mensaje">Mensaje</label>
+                  <textarea
+                    name="mensaje"
+                    id="mensaje"
+                    value={mensaje}
+                    onChange={(e) => setMensaje(e.target.value)}
+                  />
+                </div>
+                <Enviar type="submit" value="ENVIAR" />
+              </Form>
             </div>
           </div>
-          <Row2 className="row d-flex justify-center align-center">
-            <svg
-              fill="#000000"
-              height="800px"
-              width="800px"
-              version="1.1"
-              id="Capa_1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlnsXlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 367.467 367.467"
-              xmlSpace="preserve"
-            >
-              <g>
-                <path
-                  d="M183.73,0.018C82.427,0.018,0,82.404,0,183.733c0,101.289,82.427,183.716,183.73,183.716
-		c101.315,0,183.737-82.427,183.737-183.716C367.467,82.404,285.045,0.018,183.73,0.018z M183.73,326.518
-		c-78.743,0-142.798-64.052-142.798-142.784c0-78.766,64.055-142.817,142.798-142.817c78.752,0,142.807,64.052,142.807,142.817
-		C326.536,262.466,262.481,326.518,183.73,326.518z"
-                />
-                <path
-                  d="M244.036,217.014c-11.737,20.141-33.562,32.635-56.956,32.635c-36.329,0-65.921-29.585-65.921-65.915
-		c0-36.36,29.592-65.955,65.921-65.955c23.395,0,45.219,12.54,56.956,32.641l1.517,2.627h44.28l-2.658-7.129
-		c-7.705-20.413-21.225-37.769-39.122-50.157c-17.942-12.42-39.017-19.009-60.973-19.009c-58.981,0-106.946,48.006-106.946,106.982
-		c0,58.98,47.965,106.941,106.946,106.941c21.956,0,43.03-6.567,60.973-19.006c17.897-12.391,31.417-29.741,39.122-50.154
-		l2.658-7.133h-44.28L244.036,217.014z"
-                />
-              </g>
-            </svg>
-            Todos los derechos reservados - 2023
-          </Row2>
-        </Footer>
-      </Main>
-      <Navbar />
-    </>
+        </Container>
+      </>
+    </Layout>
   );
 };
 
-export default Layout;
-const Main = styled.main`
-  top: 4rem;
-  width: 100%;
-  position: absolute;
-  overflow-x: hidden;
+export default ContactPage;
+const Container = styled.div`
+  margin-top: 3rem;
+
+  @media (min-width: 768px) {
+    margin-top: 6.5rem;
+  }
 `;
-const Footer = styled.footer``;
+const H2 = styled.h2`
+  font-size: 2rem;
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+`;
+const Form = styled.form`
+  margin: 0 auto;
+  width: 90%;
+  @media (min-width: 768px) {
+    width: 80%;
+    margin: 0;
+  }
+  @media (min-width: 992px) {
+    width: 60%;
+  }
+  div label {
+    font-size: 1.4rem;
+  }
+  div input,
+  div textarea {
+    border: 3px solid #6a1b9a;
+    outline: none;
+    background-color: transparent;
+    margin-bottom: 0.5rem;
+  }
+  div input {
+    width: 100%;
+    height: 4rem;
+  }
+  div textarea {
+    width: 100%;
+    height: 12rem;
+    resize: none;
+  }
+`;
+const Enviar = styled.input`
+  background-color: #00bcd4;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  transition: all 0.4s ease;
+  :hover {
+    background-color: #067d8d;
+    transform: scale(1.1);
+  }
+`;
+const Alerta = styled.p`
+  width: 100%;
+  margin: 0;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+`;
+const DatosContacto = styled.div`
+  div svg {
+    height: 20px;
+    margin-right: 1rem;
+  }
+`;
 const StyledLink = styled(Link)`
   svg {
     width: 30px;
     height: 30px;
-  }
-`;
-const H3 = styled.h3`
-  font-size: 2rem;
-`;
-
-const Row2 = styled.div`
-  background-color: #00bcd4;
-  font-size: 1rem;
-  svg {
-    width: 30px;
-    height: 30px;
-  }
-`;
-const Ul = styled.ul`
-  list-style-type: none;
-  font-size: 1.2rem;
-  padding:0;
-  li:first-of-type {
-    font-weight: bold;
   }
 `;

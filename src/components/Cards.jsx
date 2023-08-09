@@ -8,7 +8,7 @@ const Cards = () => {
   const [cambiarIcono3, setCambiarIcono3] = useState(false);
   return (
     <CardContainer className="card-container contenedor p-4 container">
-      <div className="row wdt-100 hgt-100 d-flex m-0-auto justify-center aln-center p-3 p-md-5">
+      <div className="row wdt-100 hgt-100 d-flex m-0-auto justify-center align-center p-3 p-md-5">
         <div
           className="card col-auto p-5"
           onMouseEnter={(e) => setCambiarIcono1(true)}
@@ -41,7 +41,7 @@ const Cards = () => {
               </svg>
             )}
           </Heding>
-          <BodyCard className="body d-flex-column justify-center aln-center">
+          <BodyCard className="body d-flex-column justify-center align-center">
             <div className="title">
               <h4 className="text-center m-0-auto p-0">Lorem, ipsum.</h4>
             </div>
@@ -87,7 +87,7 @@ const Cards = () => {
             )}
           </Heding>
 
-          <BodyCard className="body d-flex-column justify-center aln-center">
+          <BodyCard className="body d-flex-column justify-center align-center">
             <div className="title">
               <h4 className="text-center m-0-auto p-0">Lorem, ipsum.</h4>
             </div>
@@ -132,7 +132,7 @@ const Cards = () => {
               </svg>
             )}
           </Heding>
-          <BodyCard className="body d-flex-column justify-center aln-center">
+          <BodyCard className="body d-flex-column justify-center align-center">
             <div className="title">
               <h4 className="text-center m-0-auto p-0">Lorem, ipsum.</h4>
             </div>

@@ -6,7 +6,7 @@ const Contacto = () => {
     <div className="contacto">
       <div className="container-fluid">
         <div className="row">
-          <Col className="col bg-primario d-flex justify-end aln-center px-4">
+          <Col className="col bg-primario d-flex justify-end align-center px-4">
             <div className="correo">
               <Link className="text-white">correo@correo.com</Link>
             </div>
