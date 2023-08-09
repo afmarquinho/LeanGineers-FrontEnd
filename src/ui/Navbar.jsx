@@ -47,18 +47,18 @@ const Navbar = () => {
                     <span>Recursos</span>
                   </Link>
                 </li>
-                <li className="text-center" onClick={onChange}>
+                {/* <li className="text-center" onClick={onChange}>
                   <Link to="#" className="link blog">
                     {" "}
                     <span>Blog</span>
                   </Link>
-                </li>
-                <li className="text-center" onClick={onChange}>
+                </li> */}
+                {/* <li className="text-center" onClick={onChange}>
                   <Link to="#" className="link reconocimientos">
                     {" "}
                     <span>Reconocimientos</span>
                   </Link>
-                </li>
+                </li> */}
                 <li className="text-center" onClick={onChange}>
                   <Contacto to="#" className="link contacto">
                     {" "}

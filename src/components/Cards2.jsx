@@ -28,7 +28,7 @@ const Cards2 = () => {
               <p className="m-0 p-0">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               </p>
-              <StyledLink to="#" className="px-4 py-2">
+              <StyledLink to="#" className="px-5 py-2">
                 VISITAR
               </StyledLink>
             </div>
@@ -50,7 +50,7 @@ const Cards2 = () => {
               <p className="m-0 p-0">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               </p>
-              <StyledLink to="#" className="px-4 py-2">
+              <StyledLink to="#" className="px-5 py-2">
                 VISITAR
               </StyledLink>
             </div>
@@ -72,7 +72,7 @@ const Cards2 = () => {
               <p className="m-0 p-0">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               </p>
-              <StyledLink to="#" className="px-4 py-2">
+              <StyledLink to="#" className="px-5 py-2">
                 VISITAR
               </StyledLink>
             </div>
@@ -126,5 +126,5 @@ const StyledLink = styled(Link)`
   color: white;
   font-weight: bold;
   border-radius: 4px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 `;

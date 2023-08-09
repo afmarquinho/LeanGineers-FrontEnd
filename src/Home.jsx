@@ -21,9 +21,9 @@ const Home = () => {
           </ImgContenedor>
           <Cards />
           <Cards2 />
-          <div className="container d-flex justify-arnd">
+          <div className="container d-flex justify-arnd my-5">
             <H4 className="m-0">Listo para empezar</H4>
-            <StyledLink to="#">Cóntactanos</StyledLink>
+            <StyledLink to="#" className="d-flex justify-center aln-center"><span>Contáctanos</span></StyledLink>
           </div>
         </>
       </Layout>
@@ -82,6 +82,7 @@ const ImgContenedor = styled.div`
 const H4 = styled.h4`
   font-size: 3rem;
   font-weight: bold;
+
 `;
 const StyledLink = styled(Link)`
 font-size: 2rem;
@@ -89,4 +90,5 @@ background-color: #5050e7;
 font-weight: bold;
 color: white;
 padding: 0.5rem 1rem;
-border-radius: 4px;`;
+border-radius: 4px;
+`;

@@ -79,8 +79,11 @@ img {
 .justify-center{
   justify-content: center;
 }
-.aln-center {
+.align-center {
   align-items: center;
+}
+.align-top {
+  align-items: flex-start;
 }
 .text-center {
   text-align: center;
