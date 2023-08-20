@@ -14,11 +14,11 @@ const Navbar = () => {
   return (
     <>
       <GrandContainer className = {`container-fluid p-0 ${mostrarMenu ? "scaled1" : "scaled0"}`}>
-        <Row className="row bg-primario m-0-auto">
+        <Row className="row m-0-auto">
           <div className="col-auto">
-            <div className="logo">
+            <Link to="/" className="logo">
               <H1 className="text-primario p-0 m-0">LEANGINEERS</H1>
-            </div>
+            </Link>
           </div>
           <div className="col-12 col-md-8 p-0">
             <nav className="nav w-100">
@@ -159,14 +159,13 @@ const Row = styled.div`
   height: 50vh;
 
   @media (min-width: 768px) {
-    max-width: 120rem;
     height: 8rem;
     justify-content: space-between;
-    padding: 0 2rem;
+    padding: 0 4rem;
+    border-bottom: 0.5rem solid #00bcd4;
   }
 
   background-color: #e8e8e8; /* Color plata más claro */
-  border-radius: 10px;
   box-shadow: 0 0 20px rgba(232, 232, 232, 0.8),
     /* Sombra externa plata */ inset 0 0 10px rgba(255, 255, 255, 0.6),
     /* Sombra interna blanca */ inset 0 0 5px rgba(255, 255, 255, 0.4); /* Sombra interna blanca */
@@ -206,7 +205,7 @@ const Button = styled.button`
   }
 `;
 const Contacto = styled(Link)`
-  background-color: #00bcd4;
+  background-color: #6dc2ce;
   padding: 0.5rem 1.5rem;
   color: white;
   border-radius: 3px;
