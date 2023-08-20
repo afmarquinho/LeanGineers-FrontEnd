@@ -3,13 +3,14 @@ import foto from "./assets/imagen1.jpg";
 import styled from "@emotion/styled";
 import { Cards, Cards2 } from "./components";
 import { Link } from "react-router-dom";
+import Slider from "./components/Slider";
 
 const Home = () => {
   return (
     <>
       <Layout>
         <>
-          <ImgContenedor className="img-contenedor m-0 p-0 wdt-100">
+          {/* <ImgContenedor className="img-contenedor m-0 p-0 wdt-100">
             <img
               src={foto}
               alt="banner"
@@ -18,7 +19,8 @@ const Home = () => {
             <div className="texto wdt-100 hgt-100">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
             </div>
-          </ImgContenedor>
+          </ImgContenedor> */}
+          <Slider/>
           <Cards />
           <Cards2 />
           <div className="container d-flex justify-arnd align-center my-5">

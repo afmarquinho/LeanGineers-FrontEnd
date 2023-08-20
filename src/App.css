@@ -148,3 +148,8 @@ img {
     transform: scaleX(0);
   }
 }
+
+/* SLIDER */
+.grand-container-slider{
+  background-image: url(../src/assets/photo1.jpg);
+}
