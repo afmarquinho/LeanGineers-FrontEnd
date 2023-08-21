@@ -24,7 +24,7 @@ const Navbar = () => {
             <nav className="nav w-100">
               <Ul className="d-flex p-0">
                 <li className="text-center" onClick={onChange}>
-                  <Link to="#" className="link nosotros">
+                  <Link to="/sobre-nosotros" className="link nosotros">
                     {" "}
                     <span>Nosotros</span>
                   </Link>

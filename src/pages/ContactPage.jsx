@@ -27,7 +27,7 @@ const ContactPage = () => {
         <Container className="container p-5;">
           <div className="row">
             <div className="col-12">
-              <H2 className="text-center">Contactanos</H2>
+              <H2 className="text-center">Contáctanos</H2>
             </div>
           </div>
           <div className="row">
