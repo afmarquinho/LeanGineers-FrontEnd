@@ -34,6 +34,7 @@ const Home = () => {
     </>
   );
 };
+// TODO: ARREGLAR LOS MARGENES Y TAMAÑOS DE LAS CARDS DEL HOME EN XS
 
 export default Home;
 

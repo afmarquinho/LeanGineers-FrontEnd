@@ -148,7 +148,7 @@ const Layout = ({ children }) => {
                 />
               </g>
             </svg>
-            Todos los derechos reservados - 2023
+            All rights reserved - Developed by Kassya Dev 2023
           </Row2>
         </Footer>
       </Main>

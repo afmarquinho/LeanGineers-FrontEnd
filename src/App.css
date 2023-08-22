@@ -2,8 +2,7 @@
 
 :root {
   --primario: #6a1b9a;
-  --secondary: #dc9feb;
-  --cyan: #00bcd4;
+  --secondary: #00bcd4;
   --negro: #000000;
   --fuentePrincipal: "Nunito Sans", sans-serif;
   --fuenteLogo: "Nunito Sans", sans-serif;
@@ -19,9 +18,14 @@ html {
 }
 body {
   font-family: var(--fuentePrincipal);
-  font-size: 1.6rem;
-  line-height: 1.8;
+  font-size: 1.4rem;
+  line-height: 1.4;
   background-color: #f2f2f2;
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    
+  }
 }
 h1,
 h2,
@@ -36,10 +40,26 @@ h1 {
   font-weight: bold;
 }
 h2 {
-  font-size: 4.6rem;
+  font-size: 3rem;
+  @media (min-width: 768px) {
+    font-size: 4.6rem;
+    
+  }
 }
 h3 {
-  font-size: 3rem;
+  font-size: 2rem;
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+    
+  }
+}
+h4 {
+  font-size: 1.8rem;
+  font-weight: bold;;
+  @media (min-width: 768px) {
+    font-size: 2rem;
+    
+  }
 }
 a {
   text-decoration: none;
@@ -47,6 +67,9 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+ul{
+  list-style:none;
 }
 
 /* //*GLOBAL UTILITIES */
@@ -111,6 +134,9 @@ img {
 }
 .text-primario {
   color: var(--primario);
+}
+.text-justify{
+  text-align: justify;
 }
 .wdt-100 {
   width: 100%;
