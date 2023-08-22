@@ -3,6 +3,7 @@ import Layout from "../layout/Layout";
 import foto from "../assets/photo3.jpg";
 import { styled } from "styled-components";
 import History from "../components/History";
+import OurTeam from "../components/OurTeam";
 
 const AboutPage = () => {
   return (
@@ -12,9 +13,7 @@ const AboutPage = () => {
           <div className="row">
             <div className="col-12">
               <Banner className="banner">
-                <IMGContianer1 className="banner__img-container ovf-hidden">
-                  <img src={foto} alt="" className="banner-img obj-fit-cover" />
-                </IMGContianer1>
+                <IMGContianer1 className="banner__img-container ovf-hidden"></IMGContianer1>
                 <Caption1 className="banner__text-container">
                   <p className="banner__text m-0 text-justify">
                     "Descubre el poder de la innovación y mejora continua con
@@ -55,8 +54,9 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-        <History/>
-       </>
+        <History />
+        <OurTeam/>
+      </>
     </Layout>
   );
 };
@@ -72,21 +72,19 @@ const Banner = styled.div`
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: #691b9add;
+   background-color: #691b9a9d; 
+
   }
 `;
 const IMGContianer1 = styled.div`
   width: 100%;
   height: 8rem;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   @media (min-width: 768px) {
     height: 55rem;
-  }
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-position: center;
-    position: relative;
   }
 `;
 const Caption1 = styled.div`
