@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { theme } from "../helpers/theme";
+import { theme } from "../helpers/theme.js";
 
 const History = () => {
   return (

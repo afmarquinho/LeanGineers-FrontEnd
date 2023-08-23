@@ -34,7 +34,7 @@ const Home = () => {
     </>
   );
 };
-// TODO: ARREGLAR LOS MARGENES Y TAMAÑOS DE LAS CARDS DEL HOME EN XS
+// TODO: AGRANDAR LAS FLECHAS DEL SLIDE
 
 export default Home;
 

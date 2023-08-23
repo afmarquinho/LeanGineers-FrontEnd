@@ -110,26 +110,30 @@ const Card = styled.div`
     object-position: center;
   }
   .card__caption {
-    font-size: 1.2rem;
-    width: 100%;
-    height: 100%;
-    text-align: justify;
-    position: absolute;
-    padding: 4rem 1rem 2rem 1rem;
-    background-color: rgba(0, 187, 212, 0.8);
-    transform: translate(100%, 100%) rotate(360deg);
-    transition: all 0.3s ease-in-out;
+      font-size: 1.2rem;
+      width: 100%;
+      height: 100%;
+      text-align: justify;
+      position: absolute;
+      padding: 4rem 1rem 2rem 1rem;
+      background-color: rgba(0, 187, 212, 0.9);
+      transform: translate(100%, 100%) rotate(360deg);
+      transition: all 0.3s ease-in-out;
+      @media (min-width: 768px) {
+          
+          font-size: 1.5rem;
+    }
   }
 `;
 const Cargo = styled.span`
   width: 100%;
   position: absolute;
   bottom: 2rem;
-  background-color: #000000;
+  /* background-color: #000000; */
   background-color: #6a1b9a;
   text-align: center;
-  color: rgb(0, 187, 212);
-  color: #b2b2b3;
+  /* color: rgb(0, 187, 212); */
+  color: #b3b3b2;
   font-weight: 900;
   padding: 1rem;
 `;

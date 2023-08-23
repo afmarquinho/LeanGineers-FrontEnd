@@ -4,6 +4,8 @@ import foto from "../assets/photo3.jpg";
 import { styled } from "styled-components";
 import History from "../components/History";
 import OurTeam from "../components/OurTeam";
+import Company from "../components/Company";
+
 
 const AboutPage = () => {
   return (
@@ -36,7 +38,7 @@ const AboutPage = () => {
                   <img src={foto} alt="about__img" />
                 </IMGContainer2>
                 <Caption2 className="about__text-container">
-                  <h3 className="about__tittle">Sobre LeanGineers</h3>
+                  <h3 className="about__tittle">Lo que somos</h3>
                   <p className="about__text m-0 text-justify">
                     En Leangineers somos una organización orientada a la
                     consultoría y formación, en la que ponemos al servicio de
@@ -54,7 +56,8 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-        <History />
+        {/* <History /> */}
+        <Company/>
         <OurTeam/>
       </>
     </Layout>

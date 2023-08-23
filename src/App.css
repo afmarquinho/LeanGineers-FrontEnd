@@ -179,3 +179,14 @@ ul {
 .banner__img-container {
   background-image: url(../src/assets/photo2.jpg);
 }
+
+/* CARDS2 HOMEPAGE */
+.img-container1{
+  background-image: url(../src/assets/photo1.jpg);
+}
+.img-container2{
+  background-image: url(../src/assets/photo2.jpg);
+}
+.img-container3{
+  background-image: url(../src/assets/photo3.jpg);
+}

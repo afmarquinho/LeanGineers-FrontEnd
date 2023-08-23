@@ -8,24 +8,19 @@ const Cards2 = () => {
   return (
     <>
       <hr />
-      <div className="contenedor container">
+      <div className="contenedor container d-flex-column justify-center align-center">
         <H2 className="text-center p-0">
           ¿Por qué somos tu <span>mejor opción</span>?
         </H2>
+
         <Card className="card d-flex-column rounded-4">
-          <ImgContainer className="img-container">
-            <img
-              src={foto}
-              alt=""
-              className="m-0 p-0 wdt-100 hgt-100 obj-fit-cover"
-            />
-          </ImgContainer>
+          <div className="img-container img-container1"></div>
           <div className="content p-4">
             <div className="heding">
               <Titulo className="m-0 p-0">Comprometidos con el país</Titulo>
             </div>
             <div className="card-body p-0">
-              <p className="m-0 p-0">
+              <p className="m-0 py-4">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               </p>
               <StyledLink to="#" className="px-5 py-2">
@@ -35,19 +30,13 @@ const Cards2 = () => {
           </div>
         </Card>
         <Card className="card d-flex-column rounded-4">
-          <ImgContainer className="img-container">
-            <img
-              src={foto2}
-              alt=""
-              className="m-0 p-0 wdt-100 hgt-100 obj-fit-cover"
-            />
-          </ImgContainer>
+          <div className="img-container img-container2"></div>
           <div className="content p-4">
             <div className="heding">
               <Titulo className="m-0 p-0">Comprometidos con el país</Titulo>
             </div>
             <div className="card-body p-0">
-              <p className="m-0 p-0">
+              <p className="m-0 py-4">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               </p>
               <StyledLink to="#" className="px-5 py-2">
@@ -57,19 +46,13 @@ const Cards2 = () => {
           </div>
         </Card>
         <Card className="card d-flex-column rounded-4">
-          <ImgContainer className="img-container">
-            <img
-              src={foto3}
-              alt=""
-              className="m-0 p-0 wdt-100 hgt-100 obj-fit-cover"
-            />
-          </ImgContainer>
+          <div className="img-container img-container3"></div>
           <div className="content p-4">
             <div className="heding">
               <Titulo className="m-0 p-0">Comprometidos con el país</Titulo>
             </div>
             <div className="card-body p-0">
-              <p className="m-0 p-0">
+              <p className="m-0 py-4">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               </p>
               <StyledLink to="#" className="px-5 py-2">
@@ -95,36 +78,49 @@ const H2 = styled.h2`
   }
 `;
 const Card = styled.div`
-      overflow: hidden;
+  overflow: hidden;
+  height: 28rem;
+  width: 35rem;
+  margin-bottom: 2rem;
+
   @media (min-width: 768px) {
     flex-direction: row;
     align-items: center;
-    height: 15rem;
     margin-bottom: 2rem;
+    height: 15rem;
+    width: 100%;
   }
-`;
-const ImgContainer = styled.div`
-  @media (min-width: 768px) {
-    width: 35%;
+  .img-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+    @media (min-width: 768px) {
+      width: 35%;
+      height: 100%;
+    }
   }
-  img {
-  }
-  @media (min-width: 768px) {
-    flex-direction: row;
+  .content {
   }
 `;
 
-const Titulo = styled.h4`
-  font-size: 1.8rem;
+const Titulo = styled.h3`
   font-weight: bold;
   @media (min-width: 768px) {
-    font-size: 3rem;
   }
 `;
+
 const StyledLink = styled(Link)`
   background-color: maroon;
   color: white;
   font-weight: bold;
   border-radius: 4px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  @media (min-width: 768px) {
+    display: inline;
+  }
 `;
