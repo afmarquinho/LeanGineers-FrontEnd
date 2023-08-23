@@ -12,7 +12,10 @@ const OurTeam = () => {
           <Titulo>Nuestro Equipo</Titulo>
           <Cards className="cards">
             <Card className="card">
-              <Cargo className="card__cargo">CARGO</Cargo>
+              <Cargo className="card__cargo">
+                Nombre y Aprellido
+                <br /> <span>CARGO</span>
+              </Cargo>
               <img className="card__img" src={persona1} alt="foto1" />
               <div className="card__caption d-flex-column justify-center align-center">
                 <Name className="caption__title text-center">
@@ -27,7 +30,10 @@ const OurTeam = () => {
             </Card>
 
             <Card className="card">
-              <Cargo className="card__cargo">CARGO</Cargo>
+              <Cargo className="card__cargo">
+                Nombre y Aprellido
+                <br /> <span>CARGO</span>
+              </Cargo>
               <img className="card__img" src={persona2} alt="foto1" />
               <div className="card__caption d-flex-column justify-center align-center">
                 <Name className="caption__title text-center">
@@ -42,7 +48,10 @@ const OurTeam = () => {
             </Card>
 
             <Card className="card">
-              <Cargo className="card__cargo">CARGO</Cargo>
+              <Cargo className="card__cargo">
+                Nombre y Aprellido
+                <br /> <span>CARGO</span>
+              </Cargo>
               <img className="card__img" src={persona3} alt="foto1" />
               <div className="card__caption d-flex-column justify-center align-center">
                 <Name className="caption__title text-center">
@@ -57,7 +66,10 @@ const OurTeam = () => {
             </Card>
 
             <Card className="card">
-              <Cargo className="card__cargo">CARGO</Cargo>
+              <Cargo className="card__cargo">
+                Nombre y Aprellido
+                <br /> <span>CARGO</span>
+              </Cargo>
               <img className="card__img" src={persona4} alt="foto1" />
               <div className="card__caption d-flex-column justify-center align-center">
                 <Name className="caption__title text-center">
@@ -79,9 +91,10 @@ const OurTeam = () => {
 
 export default OurTeam;
 const Titulo = styled.h3`
- @media (min-width: 768px) {
+  @media (min-width: 768px) {
     text-align: center;
-  }`
+  }
+`;
 const Cards = styled.div`
   display: flex;
   flex-flow: row wrap;
@@ -110,32 +123,35 @@ const Card = styled.div`
     object-position: center;
   }
   .card__caption {
-      font-size: 1.2rem;
-      width: 100%;
-      height: 100%;
-      text-align: justify;
-      position: absolute;
-      padding: 4rem 1rem 2rem 1rem;
-      background-color: rgba(0, 187, 212, 0.9);
-      transform: translate(100%, 100%) rotate(360deg);
-      transition: all 0.3s ease-in-out;
-      @media (min-width: 768px) {
-          
-          font-size: 1.5rem;
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    position: absolute;
+    padding: 4rem 1rem 2rem 1rem;
+    background-color: rgba(0, 187, 212, 0.9);
+    transform: translate(100%, 100%) rotate(360deg);
+    transition: all 0.3s ease-in-out;
+    @media (min-width: 768px) {
+      font-size: 1.5rem;
     }
   }
 `;
 const Cargo = styled.span`
   width: 100%;
   position: absolute;
-  bottom: 2rem;
+  bottom: 0;
   /* background-color: #000000; */
   background-color: #6a1b9a;
   text-align: center;
   /* color: rgb(0, 187, 212); */
-  color: #b3b3b2;
+  color: white;
   font-weight: 900;
   padding: 1rem;
+  line-height: 2rem;
+  span {
+    color:#bbbbbb;
+  }
 `;
 const Name = styled.h4`
   color: #000000;

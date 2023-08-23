@@ -1,31 +1,24 @@
-import Layout from "./layout/Layout";
-import foto from "./assets/imagen1.jpg";
+import foto from "../assets/imagen1.jpg";
 import styled from "@emotion/styled";
-import { Cards, Cards2 } from "./components";
 import { Link } from "react-router-dom";
-import Slider from "./components/Slider";
+import Layout from "../layout/Layout";
+import { Cards, Cards2 } from "../components";
+import Slider from "../ui/Slider";
 
 const Home = () => {
   return (
     <>
       <Layout>
         <>
-          {/* <ImgContenedor className="img-contenedor m-0 p-0 wdt-100">
-            <img
-              src={foto}
-              alt="banner"
-              className=" wdt-100 hgt-100 obj-fit-cover"
-            />
-            <div className="texto wdt-100 hgt-100">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            </div>
-          </ImgContenedor> */}
-          <Slider/>
+          <Slider />
           <Cards />
           <Cards2 />
           <div className="container d-flex justify-arnd align-center my-5">
             <H4 className="m-0">Listo para empezar</H4>
-            <StyledLink to="/contactanos" className="d-flex justify-center align-center">
+            <StyledLink
+              to="/contactanos"
+              className="d-flex justify-center align-center"
+            >
               <span>Contáctanos</span>
             </StyledLink>
           </div>
@@ -92,10 +85,9 @@ const H4 = styled.h4`
   }
 `;
 const StyledLink = styled(Link)`
-font-size: 1.7rem;
+  font-size: 1.7rem;
   @media (min-width: 768px) {
     font-size: 2rem;
-    
   }
   background-color: #5050e7;
   font-weight: bold;
