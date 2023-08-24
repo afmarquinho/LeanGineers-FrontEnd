@@ -6,28 +6,31 @@ import History from "../components/History";
 import OurTeam from "../components/OurTeam";
 import Company from "../components/Company";
 
-
 const AboutPage = () => {
   return (
     <Layout>
       <>
         <div className="container-fluid p-0">
-          <div className="row">
-            <div className="col-12">
-              <Banner className="banner">
-                <IMGContianer1 className="banner__img-container ovf-hidden"></IMGContianer1>
-                <Caption1 className="banner__text-container">
-                  <p className="banner__text m-0 text-justify">
-                    "Descubre el poder de la innovación y mejora continua con
-                    nuestra <span>consultoría</span> y{" "}
-                    <span>entrenamiento empresarial</span>. Juntos,
-                    transformemos tu camino hacia el éxito."
-                  </p>
-                  <h2 className="banner__text-titulo m-0">¿Quienes somos?</h2>
-                </Caption1>
-              </Banner>
+          <IMGBgBanner className="row banner-img ovf-hidden">
+            <div className="col-12 p-0">
+              <div className="container">
+                <div className="row">
+                  <div className="col-12 ">
+                    <Banner className="banner m-0-auto d-flex-column justify-center align-center">
+                      <p className="banner__text">
+                        "Descubre el poder de la innovación y mejora continua
+                        con nuestras <span>consultorías</span>,{" "}
+                        <span>entrenamientos empresariales</span> y{" "}
+                        <span>formaciones</span>. Juntos, transformemos tu
+                        camino hacia el éxito."
+                      </p>
+                      <Title className="banner__title">¡Conócenos!</Title>
+                    </Banner>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </IMGBgBanner>
         </div>
 
         <div className="container my-5">
@@ -38,7 +41,7 @@ const AboutPage = () => {
                   <img src={foto} alt="about__img" />
                 </IMGContainer2>
                 <Caption2 className="about__text-container">
-                  <h3 className="about__tittle">Lo que somos</h3>
+                  <h3 className="banner__titulo">¿Quienes somos?</h3>
                   <p className="about__text m-0 text-justify">
                     En Leangineers somos una organización orientada a la
                     consultoría y formación, en la que ponemos al servicio de
@@ -57,73 +60,69 @@ const AboutPage = () => {
           </div>
         </div>
         {/* <History /> */}
-        <Company/>
-        <OurTeam/>
+        <Company />
+        <OurTeam />
       </>
     </Layout>
   );
 };
 
 export default AboutPage;
-const Banner = styled.div`
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-   background-color: #691b9a9d; 
 
+const Banner = styled.div`
+  width: 90%;
+  height: calc(100vh - 4rem);
+  position: relative;
+  z-index: 100;
+  @media (min-width: 768px) {
+    height: 50rem;
+    width: 100%;
+  }
+  .banner__text {
+    color: white;
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+    @media (min-width: 768px) {
+      font-size: 2.5rem
+    }
+
+    span {
+      color: #dff707;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 900;
+      @media (min-width: 768px) {
+        font-size: 3rem;
+      }
+    }
   }
 `;
-const IMGContianer1 = styled.div`
-  width: 100%;
-  height: 8rem;
+const IMGBgBanner = styled.div`
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  @media (min-width: 768px) {
-    height: 55rem;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #691b9a9d;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
   }
 `;
-const Caption1 = styled.div`
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 90%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  padding: 4rem 3rem 3rem 3rem;
+const Title = styled.h2`
+  color: #00bbd4c7;
+
   @media (min-width: 768px) {
-    width: 50%;
-  }
-  h2 {
-    color: #00bbd4c7;
-    @media (min-width: 768px) {
-      font-size: 7rem;
-    }
-  }
-  p {
-    display: none;
-    font-weight: bold;
-    font-size: 2rem;
-    span {
-      color: #fffb00;
-    }
-    @media (min-width: 768px) {
-      display: block;
-    }
+    letter-spacing: 1rem;
   }
 `;
+
 const About = styled.div`
   display: flex;
   flex-direction: column;

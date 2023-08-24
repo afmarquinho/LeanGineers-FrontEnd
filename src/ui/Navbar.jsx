@@ -24,13 +24,13 @@ const Navbar = () => {
             <nav className="nav w-100">
               <Ul className="d-flex p-0">
                 <li className="text-center" onClick={onChange}>
-                  <Link to="/sobre-nosotros" className="link nosotros">
+                  <Link to="/about-us" className="link nosotros">
                     {" "}
                     <span>Nosotros</span>
                   </Link>
                 </li>
                 <li className="text-center" onClick={onChange}>
-                  <Link to="#" className="link soluciones">
+                  <Link to="/solutions" className="link soluciones">
                     {" "}
                     <span>Soluciones</span>
                   </Link>
@@ -60,7 +60,7 @@ const Navbar = () => {
                   </Link>
                 </li> */}
                 <li className="text-center" onClick={onChange}>
-                  <Contacto to="/contactanos" className="link contacto">
+                  <Contacto to="/contact-us" className="link contacto">
                     {" "}
                     <span>Contacto</span>
                   </Contacto>
