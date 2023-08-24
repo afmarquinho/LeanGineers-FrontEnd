@@ -161,6 +161,9 @@ ul {
 .font-bold {
   font-weight: bold;
 }
+.bg-card{
+  background-color: #607d8b;
+}
 
 /* NAVBAR */
 @media (max-width: 768px) {
