@@ -13,10 +13,10 @@ const AboutPage = () => {
         <div className="container-fluid p-0">
           <IMGBgBanner className="row banner-img ovf-hidden">
             <div className="col-12 p-0">
-              <div className="container">
-                <div className="row">
-                  <div className="col-12 ">
-                    <Banner className="banner m-0-auto d-flex-column justify-center align-center">
+              <div className="container h-100">
+                <div className="row h-100">
+                  <div className="col-12">
+                    <BannerContent className="banner m-0-auto h-100 d-flex-column justify-center align-center">
                       <p className="banner__text">
                         "Descubre el poder de la innovación y mejora continua
                         con nuestras <span>consultorías</span>,{" "}
@@ -24,8 +24,10 @@ const AboutPage = () => {
                         <span>formaciones</span>. Juntos, transformemos tu
                         camino hacia el éxito."
                       </p>
-                      <Title className="banner__title">¡Conócenos!</Title>
-                    </Banner>
+                      <Title className="banner__title text-center">
+                        ¡Conócenos!
+                      </Title>
+                    </BannerContent>
                   </div>
                 </div>
               </div>
@@ -69,13 +71,35 @@ const AboutPage = () => {
 
 export default AboutPage;
 
-const Banner = styled.div`
-  width: 90%;
+const IMGBgBanner = styled.div`
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
   height: calc(100vh - 4rem);
+  @media (min-width: 768px) {
+    height: calc(100vh - 12rem);
+    margin-top: 8rem;
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #691b9a9d;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+`;
+
+const BannerContent = styled.div`
+  width: 90%;
   position: relative;
   z-index: 100;
+  
   @media (min-width: 768px) {
-    height: 50rem;
     width: 100%;
   }
   .banner__text {
@@ -84,7 +108,7 @@ const Banner = styled.div`
     font-size: 2rem;
     text-align: center;
     @media (min-width: 768px) {
-      font-size: 2.5rem
+      font-size: 2.5rem;
     }
 
     span {
@@ -98,25 +122,10 @@ const Banner = styled.div`
     }
   }
 `;
-const IMGBgBanner = styled.div`
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  &::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: #691b9a9d;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-  }
-`;
+
 const Title = styled.h2`
-  color: #00bbd4c7;
+  color: #00e1ffc5;
+  text-transform: uppercase;
 
   @media (min-width: 768px) {
     letter-spacing: 1rem;

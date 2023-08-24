@@ -181,8 +181,8 @@ ul {
   background-image: url(../src/assets/photo2.jpg);
 }
 /* FONDO PAGINA SOLUCIONES */
-.background-soluction-img{
-  background-image: url(../src/assets/photo1.jpg);
+.background-solution-img{
+  background-image: url(../src/assets/imagen5.jpg);
 }
 
 /* CARDS2 HOMEPAGE */
@@ -195,3 +195,7 @@ ul {
 .img-container3{
   background-image: url(../src/assets/photo3.jpg);
 }
+.icon__chess{
+  fill: red;
+}
+/* CARDS DE SOLUCIONESk */

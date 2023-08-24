@@ -110,6 +110,9 @@ const Navbar = () => {
 
 export default Navbar;
 
+//* ALTURA TOTAL DEL NAVBAR CON LA BARRA DE CONTACTO
+//* DESKTOP: 4REM + 8 REM, EN MOBILE:  4REM + 0
+
 const GrandContainer = styled.div`
 position: sticky;
 top: 0;
