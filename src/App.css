@@ -164,6 +164,12 @@ ul {
 .bg-card{
   background-color: #607d8b;
 }
+.text-indigo{
+  color: #3f51b5;
+}
+.text-start{
+  text-align: start;
+}
 
 /* NAVBAR */
 @media (max-width: 768px) {

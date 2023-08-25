@@ -3,6 +3,7 @@ import Layout from "../layout/Layout";
 import chessSVG from "../assets/icons/chess.svg";
 import gearSVG from "../assets/icons/gear.svg";
 import tacticSVG from "../assets/icons/tactic.svg";
+import { Link } from "react-router-dom";
 
 // TODO: PONER UN BOTON DE WAP STATICO
 
@@ -27,6 +28,9 @@ const SolutionsPage = () => {
       <div className="container my-5">
         <div className="row  d-flex justify-center align-center">
           {/* //? -------------------> CARD INNOVACION <--------------------------*/}
+          <h2 className="text-center text-indigo">
+            CONSULTORÍAS EMPRESARIALES
+          </h2>
           <div className="col-12 col-md-3 m-3">
             <Card className="card p-4 bg-card text-white d-flex-clumn justify-btw align-center">
               <div className=" w-100">
@@ -182,6 +186,88 @@ const SolutionsPage = () => {
           </div>
         </div>
       </div>
+      <div className="container">
+        <div className="row">
+          <hr />
+          <h2 className="text-center text-indigo">FORMACIONES</h2>
+          <div className="col-12 col-md-3">
+            <Link to="#">
+              <Innovacion className="card rounded-5 ovf-hidden">
+                <div className="card__container">
+                  <h3 className="card__title text-center">Innovación</h3>
+                  <p>Service Design</p>
+                  <p>Design Thinking Method Systematic Inventive Thinking</p>
+                  <p>Forth Innovation Method</p>
+                  <p>Systematic Inventive Thinking</p>
+                </div>
+                <StyledLink className="text-center campus-link">
+                  Ir al campus
+                </StyledLink>
+              </Innovacion>
+            </Link>
+          </div>
+          <div className="col-12 col-md-3">
+            <Link to="#">
+              <Mejora className="card rounded-5 h-100 ovf-hidden ">
+                <div className="card__container">
+                  <h3 className="card__title text-center">Mejora continua</h3>
+                  <p>Lean Management</p>
+                  <p>Reingeniería</p>
+                  <p>Six Sigma (DMAIC, DMADV)</p>
+                  <p>Teoría de Restricciones (TOC)</p>
+                </div>
+                <StyledLink className="text-center campus-link">
+                  Ir al campus
+                </StyledLink>
+              </Mejora>
+            </Link>
+          </div>
+          <div className="col-12 col-md-3">
+            <Link to="#">
+              <Liderazgo className="card rounded-5 h-100 ovf-hidden">
+                <div className="card__container">
+                  <h3 className="card__title text-center">Liderazgo</h3>
+
+                  <p>Coaching</p>
+                  <p>Toyota Kata </p>
+                  <p>Gestión del cambio </p>
+                  <p>Liderazgo situacional</p>
+                </div>
+                <StyledLink className="text-center campus-link">
+                  Ir al campus
+                </StyledLink>
+              </Liderazgo>
+            </Link>
+          </div>
+          <div className="col-12 col-md-3">
+            <Link to="#">
+              <Tecnologia className="card rounded-5 h-100 ovf-hidden">
+                <div className="card__container">
+                  <h3 className="card__title text-center">Tecnología</h3>
+                  <p>Aprendizaje automático</p>
+                  <p> Aprendizaje profundo </p>
+                  <p>Big Data </p>
+                  <p>Ciencia de datos</p>
+                </div>
+                <StyledLink className="text-center campus-link">
+                  Ir al campus
+                </StyledLink>
+              </Tecnologia>
+            </Link>
+          </div>
+          <div className="aditional--content my-5">
+            <h4>¿Por qué elegirnos?</h4>
+            <ul>
+              <li>Formacion de vaguardia</li>
+              <li>100% virtual</li>
+              <li>Sesiones en vivo</li>
+              <li>Actualizaciones Permanentes</li>
+              <li>Precios inmejorables</li>
+              <li>Harás parte de nuestra comunidad internacional</li>
+            </ul>{" "}
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 };
@@ -283,4 +369,78 @@ const Title = styled.h2`
   @media (min-width: 768px) {
     letter-spacing: 1rem;
   }
+`;
+const Innovacion = styled.div`
+  background-color: #aed581;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 2rem;
+  .card__container {
+    width: 90%;
+    text-align: start;
+  }
+  :hover .campus-link {
+    background-color: #311b92;
+  }
+`;
+const Mejora = styled.div`
+  background-color: #e1bee7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 2rem;
+  .card__container {
+    width: 90%;
+    text-align: start;
+  }
+  :hover .campus-link {
+    background-color: #311b92;
+  }
+`;
+const Liderazgo = styled.div`
+  background-color: #fff59d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 2rem;
+  .card__container {
+    width: 90%;
+    text-align: start;
+  }
+  :hover .campus-link {
+    background-color: #311b92;
+  }
+`;
+const Tecnologia = styled.div`
+  background-color: #ffab91;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 2rem;
+  .card__container {
+    width: 90%;
+    text-align: start;
+  }
+  :hover .campus-link {
+    background-color: #311b92;
+  }
+`;
+const StyledLink = styled.p`
+  background-color: #536dfe;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
 `;
