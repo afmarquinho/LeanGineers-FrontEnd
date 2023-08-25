@@ -190,7 +190,7 @@ const SolutionsPage = () => {
         <div className="row">
           <hr />
           <h2 className="text-center text-indigo">FORMACIONES</h2>
-          <div className="col-12 col-md-3">
+          <div className="col-12 col-md-3 my-3">
             <Link to="#">
               <Innovacion className="card rounded-5 ovf-hidden">
                 <div className="card__container">
@@ -206,7 +206,7 @@ const SolutionsPage = () => {
               </Innovacion>
             </Link>
           </div>
-          <div className="col-12 col-md-3">
+          <div className="col-12 col-md-3 my-3">
             <Link to="#">
               <Mejora className="card rounded-5 h-100 ovf-hidden ">
                 <div className="card__container">
@@ -222,7 +222,7 @@ const SolutionsPage = () => {
               </Mejora>
             </Link>
           </div>
-          <div className="col-12 col-md-3">
+          <div className="col-12 col-md-3 my-3">
             <Link to="#">
               <Liderazgo className="card rounded-5 h-100 ovf-hidden">
                 <div className="card__container">
@@ -239,7 +239,7 @@ const SolutionsPage = () => {
               </Liderazgo>
             </Link>
           </div>
-          <div className="col-12 col-md-3">
+          <div className="col-12 col-md-3 my-3">
             <Link to="#">
               <Tecnologia className="card rounded-5 h-100 ovf-hidden">
                 <div className="card__container">
