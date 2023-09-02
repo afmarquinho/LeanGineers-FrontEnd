@@ -192,8 +192,7 @@ const TextArea = styled.textarea`
 `;
 const Button = styled(Input)`
   background-color: #00bcd4;
-  border-color: #005f6b;
-  border-width: 2px;
+  border: 1px solid #005f6b;
   cursor: pointer;
   &:hover {
     background-color: #95ebf7;
