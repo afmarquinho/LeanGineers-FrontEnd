@@ -230,6 +230,7 @@ const ContactPage = () => {
     </Layout>
   );
 };
+// TODO: PONER EN ASUNTO UNA LISTA DESPLEGABLE: PREGUNTA, QUEJA, RECLAMO, FELICITACIONES, SUGERENRCIA, OTRO
 
 export default ContactPage;
 const Container = styled.div`

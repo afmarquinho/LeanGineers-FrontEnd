@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
-import persona1 from "../assets/persona1.jpg";
-import persona2 from "../assets/persona2.jpg";
+import persona1 from "../assets/persona1.png";
+import persona2 from "../assets/persona2.png";
 import persona3 from "../assets/persona3.jpg";
-import persona4 from "../assets/persona4.jpg";
+import persona4 from "../assets/persona4.png";
 
 const OurTeam = () => {
   return (

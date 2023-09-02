@@ -161,9 +161,7 @@ ul {
 .font-bold {
   font-weight: bold;
 }
-.bg-card{
-  background-color: #607d8b;
-}
+
 .text-indigo{
   color: #3f51b5;
 }
@@ -207,4 +205,59 @@ ul {
 .icon__chess{
   fill: red;
 }
-/* CARDS DE SOLUCIONESk */
+.bg-light{
+  background-color: #fcfcfc;
+}
+.bg-colored{
+  background-color: #6a1b9a;
+  /* background-color: #00bcd4; */
+}
+.text-yellow{
+  color: #ffa600;
+}
+.text-pink{
+  color: #e91e63;
+}
+.bg-light-danger{
+  background-color: #fff4f6;
+}
+.bg-lightBlue{
+  background-color: #f0f9ff;
+}
+.bg-lightSuccess{
+  background-color: #f6fff7;
+}
+.bg-pink{
+  background-color: #e91e63;
+}
+.bg-lightPink{
+  background-color: #fff8fa;
+}
+
+.text-deepOrange{
+  color: #ff5722;
+}
+.bg-deepOrange{
+  background-color: #ff5722;
+}
+.bg-lightOrange{
+  background-color: #fff6f3;
+}
+.text-purple{
+  color: #9c27b0;
+}
+.bg-purple{
+  background-color: #9c27b0;
+}
+.bg-lightPurple{
+  background-color: #fef5ff;
+}
+.text-teal{
+  color: #009688;
+}.bg-teal{
+  background-color: #009688;
+}
+.bg-lightTeal{
+  background-color:  #f2fffe;
+}
+  /* CARDS DE SOLUCIONESk */
