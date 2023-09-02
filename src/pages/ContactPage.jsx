@@ -30,7 +30,7 @@ const ContactPage = () => {
               <h2 className="text-center my-5">Contáctanos</h2>
             </div>
           </div>
-          <div className="row w-100 d-flex justify-center">
+          <div className="row m-0 w-100 d-flex justify-center">
             <div className="col-12 col-md-4 col-lg-3 p-5 bg-secundario ">
               <DatosContacto className="datos-contacto order-2 order-md-1 h-100 text-white">
                 <div className="correo me-3">
