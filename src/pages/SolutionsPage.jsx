@@ -4,6 +4,7 @@ import chessSVG from "../assets/icons/chess.svg";
 import gearSVG from "../assets/icons/gear.svg";
 import tacticSVG from "../assets/icons/tactic.svg";
 import { Link } from "react-router-dom";
+import EstoyInteresado from "../components/EstoyInteresado";
 
 // TODO: PONER UN BOTON DE WAP STATICO
 
@@ -32,10 +33,12 @@ const SolutionsPage = () => {
             CONSULTORÍAS EMPRESARIALES
           </h2>
           <div className="col-12 col-md-3 m-3">
-            <Card className="card p-4 bg-card text-white d-flex-clumn justify-btw align-center">
-              <div className=" w-100">
-                <h4 className="card__title text-center">Innovación</h4>
-                <ul className="card__list text-center m-0 p-0">
+            <Card className="card p-4 bg-light-danger d-flex-clumn justify-btw align-center">
+              <div className="w-100">
+                <h4 className="card__title text-center text-danger">
+                  Innovación
+                </h4>
+                <ul className="card__list text-center m-0 p-0 text-black">
                   <li className="card__item">Servicios</li>
                   <li className="card__item">Canales</li>
                   <li className="card__item">Marca</li>
@@ -48,7 +51,7 @@ const SolutionsPage = () => {
                   Recomendado
                 </Recomendado>
               </div>
-              <Button className="card__btn p-3 font-bold w-100">
+              <Button className="card__btn p-3 font-bold w-100 bg-danger text-white">
                 Saber Más
               </Button>
             </Card>
@@ -56,9 +59,11 @@ const SolutionsPage = () => {
 
           {/* //? -------------------> CARD WORKSHOP <--------------------------*/}
           <div className="col-12 col-md-3 m-3">
-            <Card className="card p-4 bg-card text-white d-flex-clumn justify-btw align-center">
+            <Card className="card p-4 bg-lightBlue d-flex-clumn justify-btw align-center">
               <div className=" w-100">
-                <h4 className="card__title text-center">Workshops</h4>
+                <h4 className="card__title text-center text-primary">
+                  Workshops
+                </h4>
                 <ul className="card__list text-center m-0 p-0">
                   <li className="card__item">
                     Enfocados a innovación y mejora continua.
@@ -68,7 +73,7 @@ const SolutionsPage = () => {
                   Recomendado
                 </Recomendado>
               </div>
-              <Button className="card__btn p-3 font-bold w-100">
+              <Button className="card__btn p-3 font-bold w-100 bg-primary text-white">
                 Saber Más
               </Button>
             </Card>
@@ -76,9 +81,9 @@ const SolutionsPage = () => {
 
           {/* //? -------------------> CARD SG <--------------------------*/}
           <div className="col-12 col-md-3 m-3">
-            <Card className="card p-4 bg-card text-white d-flex-clumn justify-btw align-center">
+            <Card className="card p-4 bg-lightSuccess d-flex-clumn justify-btw align-center">
               <div className="w-100">
-                <h4 className="card__title text-center">
+                <h4 className="card__title text-center text-success">
                   Diseño de Sistemas de Gestión
                 </h4>
                 <ul className="card__list text-center m-0 p-0">
@@ -89,30 +94,7 @@ const SolutionsPage = () => {
                   </li>
                 </ul>
               </div>
-              <Button className="card__btn p-3 font-bold w-100">
-                Saber Más
-              </Button>
-            </Card>
-          </div>
-
-          {/* //? -------------------> CARD DIGITALIZACION <--------------------------*/}
-          <div className="col-12 col-md-3 m-3">
-            <Card className="card p-4 bg-card text-white d-flex-clumn justify-btw align-center">
-              <div className="w-100">
-                <h4 className="card__title text-center">
-                  Digitalización de Datos y Procesos
-                </h4>
-                <ul className="card__list text-center m-0 p-0">
-                  <li className="card__item">Lorem ipsum dolor sit.</li>
-                  <li className="card__item">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </li>
-                </ul>
-                <Recomendado className="card__recomendado">
-                  Recomendado
-                </Recomendado>
-              </div>
-              <Button className="card__btn p-3 font-bold w-100">
+              <Button className="card__btn p-3 font-bold w-100 text-white bg-success">
                 Saber Más
               </Button>
             </Card>
@@ -120,9 +102,9 @@ const SolutionsPage = () => {
 
           {/* //? -------------------> CARD INTELIGENCIA DE NEGOCIOS <--------------------------*/}
           <div className="col-12 col-md-3 m-3">
-            <Card className="card p-4 bg-card text-white d-flex-clumn justify-btw align-center">
+            <Card className="card p-4 bg-lightPurple d-flex-clumn justify-btw align-center">
               <div className="w-100">
-                <h4 className="card__title text-center">
+                <h4 className="card__title text-center text-purple">
                   Inteligencia de Negocios
                 </h4>
                 <ul className="card__list text-center m-0 p-0">
@@ -135,7 +117,30 @@ const SolutionsPage = () => {
                   Recomendado
                 </Recomendado>
               </div>
-              <Button className="card__btn p-3 font-bold w-100">
+              <Button className="card__btn p-3 font-bold w-100 bg-purple text-white">
+                Saber Más
+              </Button>
+            </Card>
+          </div>
+
+          {/* //? -------------------> CARD DIGITALIZACION <--------------------------*/}
+          <div className="col-12 col-md-3 m-3">
+            <Card className="card p-4 bg-lightPink d-flex-clumn justify-btw align-center">
+              <div className="w-100">
+                <h4 className="card__title text-center text-pink">
+                  Digitalización de Datos y Procesos
+                </h4>
+                <ul className="card__list text-center m-0 p-0">
+                  <li className="card__item">Lorem ipsum dolor sit.</li>
+                  <li className="card__item">
+                    Lorem ipsum dolor sit amet consectetur.
+                  </li>
+                </ul>
+                <Recomendado className="card__recomendado">
+                  Recomendado
+                </Recomendado>
+              </div>
+              <Button className="card__btn p-3 font-bold w-100 text-white bg-pink">
                 Saber Más
               </Button>
             </Card>
@@ -143,9 +148,9 @@ const SolutionsPage = () => {
 
           {/* //? -------------------> CARD TRANSFORMACION DIGITAL <--------------------------*/}
           <div className="col-12 col-md-3 m-3">
-            <Card className="card p-4 bg-card text-white d-flex-clumn justify-btw align-center">
+            <Card className="card p-4 bg-lightOrange d-flex-clumn justify-btw align-center">
               <div className="w-100">
-                <h4 className="card__title text-center">
+                <h4 className="card__title text-center text-deepOrange">
                   Estrategia de Transformación Digital y Adopción de Tecnologías
                   Avanzadas
                 </h4>
@@ -156,7 +161,7 @@ const SolutionsPage = () => {
                   </li>
                 </ul>
               </div>
-              <Button className="card__btn p-3 font-bold w-100">
+              <Button className="card__btn p-3 font-bold w-100 bg-deepOrange text-white">
                 Saber Más
               </Button>
             </Card>
@@ -164,9 +169,9 @@ const SolutionsPage = () => {
 
           {/* //? -------------------> CARD MODELO OPERATIVO <--------------------------*/}
           <div className="col-12 col-md-3 m-3">
-            <Card className="card p-4 bg-card text-white d-flex-clumn justify-btw align-center">
+            <Card className="card p-4 bg-lightTeal d-flex-clumn justify-btw align-center">
               <div className="w-100">
-                <h4 className="card__title text-center">
+                <h4 className="card__title text-center text-teal">
                   Diseño e Implementación de Modelo Operativo
                 </h4>
                 <ul className="card__list text-center m-0 p-0">
@@ -179,7 +184,7 @@ const SolutionsPage = () => {
                   Recomendado
                 </Recomendado>
               </div>
-              <Button className="card__btn p-3 font-bold w-100">
+              <Button className="card__btn p-3 font-bold w-100 text-white bg-teal">
                 Saber Más
               </Button>
             </Card>
@@ -190,6 +195,7 @@ const SolutionsPage = () => {
         <div className="row">
           <hr />
           <h2 className="text-center text-indigo">FORMACIONES</h2>
+
           <div className="col-12 col-md-3 my-3">
             <Link to="#">
               <Innovacion className="card rounded-5 ovf-hidden">
@@ -255,7 +261,7 @@ const SolutionsPage = () => {
               </Tecnologia>
             </Link>
           </div>
-          <div className="aditional--content my-5">
+          <div className="col-12 aditional--content my-5">
             <h4>¿Por qué elegirnos?</h4>
             <ul>
               <li>Formacion de vaguardia</li>
@@ -268,6 +274,8 @@ const SolutionsPage = () => {
           </div>
         </div>
       </div>
+
+      <EstoyInteresado />
     </Layout>
   );
 };
@@ -277,7 +285,6 @@ export default SolutionsPage;
 const Card = styled.div`
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
   height: auto;
   font-size: 1.3rem;
@@ -299,7 +306,6 @@ const Card = styled.div`
     margin: 1rem 0;
     position: relative;
     z-index: 20;
-    color: black;
     font-size: 1.5rem;
     @media (min-width: 992px) {
       font-size: 1.7rem;
@@ -307,7 +313,7 @@ const Card = styled.div`
   }
 `;
 const Recomendado = styled.div`
-  background-color: yellow;
+  background-color: #ffeb3b;
   color: black;
   text-align: center;
   position: absolute;
@@ -320,7 +326,6 @@ const Recomendado = styled.div`
 `;
 const Button = styled.button`
   border: none;
-  background-color: #ffc107;
   color: #212121;
   position: relative;
   bottom: 0;
