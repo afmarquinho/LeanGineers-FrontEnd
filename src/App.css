@@ -1,11 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,900&display=swap");
 
 :root {
-  --primario: #6a1b9a;
-  --secondary: #00bcd4;
-  --negro: #000000;
-  --fuentePrincipal: "Nunito Sans", sans-serif;
-  --fuenteLogo: "Nunito Sans", sans-serif;
+  /* LIGHT PALLETE */
+  --light-background: #f2f2f2;
+  --light-primary-color: #6a1b9a;
+  --light-secondary-color: #00bcd4;
+  --light-text-color: #263238;
+  --light-text-title: #000000;
+  
+  /* DARK PALLETE  */
+  --dark-background: #0d0114;
+  --dark-text-color: #f5f5f5;
+  --light-text-title: #fafafa;
+
+  /* OTHER STYLES  */
+  --blue-color: #5050e7;
+  --yellow-color: #dff707;  
+  --main-font: "Nunito Sans", sans-serif;
+  --logo-font: "Nunito Sans", sans-serif;
 }
 html {
   font-size: 62.5%;
@@ -17,10 +29,9 @@ html {
   box-sizing: inherit;
 }
 body {
-  font-family: var(--fuentePrincipal);
+  font-family: var(--main-font);
   font-size: 1.4rem;
   line-height: 1.4;
-  background-color: #f2f2f2;
   scroll-behavior: smooth;
   @media (min-width: 768px) {
     font-size: 1.6rem;
@@ -35,8 +46,7 @@ h3 {
 }
 h1 {
   font-size: 2rem;
-  font-family: var(--fuenteLogo);
-  color: var(--primario);
+  font-family: var(--logo-font);
   font-weight: bold;
 }
 h2 {
@@ -108,12 +118,6 @@ ul {
 .text-center {
   text-align: center;
 }
-.bg-primario {
-  background-color: var(--primario);
-}
-.bg-secundario {
-  background-color: var(--secondary);
-}
 .m-0 {
   margin: 0;
 }
@@ -123,15 +127,7 @@ ul {
 .m-0-auto {
   margin: 0 auto;
 }
-.text-white {
-  color: white;
-}
-.text-black {
-  color: black;
-}
-.text-primario {
-  color: var(--primario);
-}
+
 .text-justify {
   text-align: justify;
 }
@@ -162,9 +158,7 @@ ul {
   font-weight: bold;
 }
 
-.text-indigo{
-  color: #3f51b5;
-}
+
 .text-start{
   text-align: start;
 }

@@ -197,7 +197,7 @@ const Button = styled.button`
   height: 3rem;
   width: 3rem;
   border: none;
-  background-color: #d4d4d4;
+  background-color: var(--primario);
   position: absolute;
   padding: 3px;
   top: 5rem;

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { useEffect, useState } from "react";
-import { theme } from "../helpers/theme";
 import { History, Mision, Values, Vision } from "./";
+import { theme } from "../styles/theme";
 
 const Company = () => {
   const [history, setHistory] = useState(true);

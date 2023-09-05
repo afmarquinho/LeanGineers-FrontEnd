@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
+import useDark from "../helpers/useDark";
+import { theme } from "../styles/theme";
 
 const Contacto = () => {
   return (
@@ -24,7 +26,9 @@ export default Contacto;
 
 const Col = styled.div`
   height: 4rem;
-  border-bottom: 0.5rem solid #00bcd4;
+  border-bottom: 0.5rem solid ${(props) => props.theme.light.secondayColor};
+  background-color: ${(props) => (props.darkMode ? theme.dark.secondaryColor : theme.light.primaryColor)};
+
   .correo {
     border-right: 1px solid white;
     padding: 0 2rem;
