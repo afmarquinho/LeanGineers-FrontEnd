@@ -42,7 +42,7 @@ const Ofrecemos = () => {
             </CardContainer>
           </Col>
           <Col xs={12} md={6}>
-            <Subtitulo>Consultorias Empresariales</Subtitulo>
+            <Subtitulo>Consultorías Empresariales</Subtitulo>
 
             <CardContainer>
               <ImgContainer>
