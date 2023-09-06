@@ -1,12 +1,8 @@
 import Contacto from "../ui/Contacto";
 import Navbar from "../ui/Navbar";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import DarkContext from "../context/DarkProvider";
-import { theme } from "../styles/theme";
 import useDark from "../helpers/useDark";
 import { styled } from "styled-components";
-
 
 const Layout = ({ children }) => {
   const { darkMode, setDarkMode } = useDark();
@@ -18,7 +14,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Contacto darkMode={darkMode} />
-      <Button className="m-0 p-0" onClick={darkActivation}>
+      <Button className="m-0 p-0" onClick={darkActivation} $darkMode={darkMode}>
         {darkMode ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +47,7 @@ const Layout = ({ children }) => {
           </svg>
         )}
       </Button>
-      <Main>
+       <Main>
         {children}
         <Footer className="container-fluid">
           <hr className="my-5" />
@@ -195,8 +191,8 @@ const Layout = ({ children }) => {
             All rights reserved - Developed by Kassya Dev 2023
           </Row2>
         </Footer>
-      </Main>
-      <Navbar />
+      </Main> 
+      <Navbar /> 
     </>
   );
 };
@@ -239,7 +235,9 @@ const Button = styled.button`
   width: 4rem;
   height: 3rem;
   background-color: ${(props) =>
-    props.darkMode ? theme.light.background : theme.dark.background};
+    props.$darkMode
+      ? props.theme.light.background
+      : props.theme.dark.background};
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border: none;
@@ -247,7 +245,9 @@ const Button = styled.button`
   z-index: 1000;
   svg {
     color: ${(props) =>
-      props.darkMode ? theme.light.textColor : theme.dark.textColor};
+      props.$darkMode
+        ? props.theme.light.textColor
+        : props.theme.dark.textColor};
     width: 20px;
     height: 20px;
   }

@@ -1,10 +1,12 @@
 import { styled } from "styled-components";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useDark from "../helpers/useDark";
+import { theme } from "../styles/theme";
 
 const Navbar = () => {
   const [mostrarMenu, setMostrarMenu] = useState(false);
-
+  const { darkMode } = useDark();
   const onShow = () => {
     setMostrarMenu(!mostrarMenu);
   };
@@ -13,97 +15,107 @@ const Navbar = () => {
   };
   return (
     <>
-      <GrandContainer className = {`container-fluid p-0 ${mostrarMenu ? "scaled1" : "scaled0"}`}>
-        <Row className="row m-0-auto">
-          <div className="col-auto">
-            <Link to="/" className="logo">
-              <H1 className="text-primario p-0 m-0">LEANGINEERS</H1>
-            </Link>
-          </div>
-          <div className="col-12 col-md-8 p-0">
-            <nav className="nav w-100">
-              <Ul className="d-flex p-0">
-                <li className="text-center" onClick={onChange}>
-                  <Link to="/about-us" className="link nosotros">
-                    {" "}
-                    <span>Nosotros</span>
-                  </Link>
-                </li>
-                <li className="text-center" onClick={onChange}>
-                  <Link to="/solutions" className="link soluciones">
-                    {" "}
-                    <span>Soluciones</span>
-                  </Link>
-                </li>
-                <li className="text-center" onClick={onChange}>
-                  <Link to="#" className="link entrenamiento">
-                    {" "}
-                    <span>Entrenamiento</span>
-                  </Link>
-                </li>
-                <li className="text-center" onClick={onChange}>
-                  <Link to="#" className="link recursos">
-                    {" "}
-                    <span>Recursos</span>
-                  </Link>
-                </li>
-                {/* <li className="text-center" onClick={onChange}>
-                  <Link to="#" className="link blog">
+      <ContentContainer
+        className={`m-0 w-100 p-100 d-flex ${
+          mostrarMenu ? "scaled1" : "scaled0"
+        }`}
+        $darkMode={darkMode}
+      >
+        <Link to="/" className="logo">
+          <H1 className="p-0 m-0">LEANGINEERS</H1>
+        </Link>
+        <nav className="nav w-100">
+          <Ul className=" p-0">
+            <li className="text-center" onClick={onChange}>
+              <StyledLink
+                to="/about-us"
+                className="link nosotros"
+                $darkMode={darkMode}
+              >
+                {" "}
+                <span>Nosotros</span>
+              </StyledLink>
+            </li>
+            <li className="text-center" onClick={onChange}>
+              <StyledLink
+                to="/solutions"
+                className="link soluciones"
+                $darkMode={darkMode}
+              >
+                {" "}
+                <span>Soluciones</span>
+              </StyledLink>
+            </li>
+            <li className="text-center" onClick={onChange}>
+              <StyledLink
+                to="#"
+                className="link entrenamiento"
+                $darkMode={darkMode}
+              >
+                {" "}
+                <span>Entrenamiento</span>
+              </StyledLink>
+            </li>
+            <li className="text-center" onClick={onChange}>
+              <StyledLink to="#" className="link recursos" $darkMode={darkMode}>
+                {" "}
+                <span>Recursos</span>
+              </StyledLink>
+            </li>
+            {/* <li className="text-center" onClick={onChange}>
+                  <StyledLink to="#" className="link blog" $darkMode={darkMode}>
                     {" "}
                     <span>Blog</span>
-                  </Link>
+                  </StyledLink>
                 </li> */}
-                {/* <li className="text-center" onClick={onChange}>
-                  <Link to="#" className="link reconocimientos">
+            {/* <li className="text-center" onClick={onChange}>
+                  <StyledLink to="#" className="link reconocimientos" $darkMode={darkMode}>
                     {" "}
                     <span>Reconocimientos</span>
-                  </Link>
+                  </StyledLink>
                 </li> */}
-                <li className="text-center" onClick={onChange}>
-                  <Contacto to="/contact-us" className="link contacto">
-                    {" "}
-                    <span>Contacto</span>
-                  </Contacto>
-                </li>
-              </Ul>
-            </nav>
-          </div>
-          
-        </Row>
-      </GrandContainer>
-      <Button className="btn-menu" onClick={onShow}>
-            {mostrarMenu ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="black"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="black"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
-                />
-              </svg>
-            )}
-          </Button>
+            <li className="text-center" onClick={onChange}>
+              <Contacto to="/contact-us" className="link contacto">
+                {" "}
+                <span>Contacto</span>
+              </Contacto>
+            </li>
+          </Ul>
+        </nav>
+      </ContentContainer>
+      <Button className="btn-menu" onClick={onShow} $darkMode={darkMode}>
+        {mostrarMenu ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="white"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="white"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+            />
+          </svg>
+        )}
+      </Button>
     </>
   );
 };
@@ -113,83 +125,80 @@ export default Navbar;
 //* ALTURA TOTAL DEL NAVBAR CON LA BARRA DE CONTACTO
 //* DESKTOP: 4REM + 8 REM, EN MOBILE:  4REM + 0
 
-const GrandContainer = styled.div`
-position: sticky;
-top: 0;
-z-index:900;  
+const ContentContainer = styled.div`
+  padding: 12rem 3rem;
+  height: 100vh;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  border-bottom: 0.5rem solid
+    ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.secondaryColor
+        : props.theme.light.primaryColor};
+  background-color: ${(props) =>
+    props.$darkMode ? props.theme.light.primaryColor : props.theme.other.light};
+  position: fixed;
+  z-index: 500;
+
+  @media (min-width: 768px) {
+    padding: 3rem;
+    height: 8rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Ul = styled.ul`
   list-style: none;
-  justify-content: space-between;
-  margin: 0;
   width: 100%;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 3rem;
+  }
+
   li {
+    margin-bottom: 1.5rem;
     transition: all 0.3s ease;
+    @media (min-width: 768px) {
+      margin: 0;
+      display: flex;
+    }
+    .link {
+    }
     cursor: pointer;
-    @media (max-width: 992px) {
-      font-size: 1.4rem;
-    }
-    @media (max-width: 768px) {
-      font-size: 1.5rem;
-    }
     &:hover {
       transform: scale(1.2);
       font-weight: bold;
-      .link {
-        color: #6a1b9a;
-      }
     }
   }
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    margin: 0 auto;
+`;
+const StyledLink = styled(Link)`
+  color: ${(props) =>
+    props.$darkMode ? props.theme.dark.textColor : props.theme.other.blueColor};
+  transition: color 0.3s ease;
+  &:hover {
+    color: ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.textColor
+        : props.theme.light.primaryColor};
   }
 `;
 
 const H1 = styled.h1`
-  font-size: 3rem;
-  @media (max-width: 992px) {
+  font-size: 2rem;
+  text-align: center;
+  @media (min-width: 768px) {
+    text-align: start;
     font-size: 2.5rem;
   }
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
-`;
-
-const Row = styled.div`
-  height: 50vh;
-
-  @media (min-width: 768px) {
-    height: 8rem;
-    justify-content: space-between;
-    padding: 0 4rem;
-    border-bottom: 0.5rem solid #00bcd4;
-  }
-
-  background-color: #e8e8e8; /* Color plata más claro */
-  box-shadow: 0 0 20px rgba(232, 232, 232, 0.8),
-    /* Sombra externa plata */ inset 0 0 10px rgba(255, 255, 255, 0.6),
-    /* Sombra interna blanca */ inset 0 0 5px rgba(255, 255, 255, 0.4); /* Sombra interna blanca */
-
-  /* Gradiente para dar sensación de flotar */
-  background-image: linear-gradient(45deg, #e8e8e8, #ffffff);
-
-  .col-auto {
-    @media (min-width: 768px) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-  .col-12 {
-    @media (min-width: 768px) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 70%;
-    }
+  @media (min-width: 992px) {
+    font-size: 3rem;
   }
 `;
 
@@ -197,11 +206,14 @@ const Button = styled.button`
   height: 3rem;
   width: 3rem;
   border: none;
-  background-color: var(--primario);
-  position: absolute;
+  background-color: ${(props) =>
+    props.$darkMode
+      ? props.theme.dark.secondaryColor
+      : props.theme.light.primaryColor};
+  position: fixed;
   padding: 3px;
   top: 5rem;
-  right: 3rem;
+  right: 2rem;
   z-index: 1000;
   @media (min-width: 768px) {
     display: none;

@@ -1,25 +1,31 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
+import useDark from "../helpers/useDark";
 
 const Cards = () => {
+  const { darkMode } = useDark();
   const [cambiarIcono1, setCambiarIcono1] = useState(false);
   const [cambiarIcono2, setCambiarIcono2] = useState(false);
   const [cambiarIcono3, setCambiarIcono3] = useState(false);
   return (
     <CardContainer className="card-container contenedor p-4 container">
-      <div className="row wdt-100 hgt-100 d-flex m-0-auto justify-center align-center p-3 p-md-5">
-        <div
+      <Row
+        className="row wdt-100 hgt-100 d-flex m-0-auto justify-center align-center p-3 p-md-5"
+        $darkMode={darkMode}
+      >
+        <Card
           className="card col-auto p-5"
           onMouseEnter={(e) => setCambiarIcono1(true)}
           onMouseLeave={(e) => setCambiarIcono1(false)}
+          $darkMode={darkMode}
         >
           <Heding className="heding m-0-auto">
             {cambiarIcono1 ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                height="70"
-                width="70"
+                height="60"
+                width="60"
                 viewBox="0 -960 960 960"
               >
                 <path
@@ -30,8 +36,8 @@ const Cards = () => {
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                height="70"
-                width="70"
+                height="60"
+                width="60"
                 viewBox="0 -960 960 960"
               >
                 <path
@@ -53,11 +59,12 @@ const Cards = () => {
               <span>VER MAS</span>
             </StyledLink>
           </BodyCard>
-        </div>
-        <div
+        </Card>
+        <Card
           className="card col-auto p-5"
           onMouseEnter={(e) => setCambiarIcono2(true)}
           onMouseLeave={(e) => setCambiarIcono2(false)}
+          $darkMode={darkMode}
         >
           <Heding className="heding m-0-auto">
             {cambiarIcono2 ? (
@@ -99,11 +106,12 @@ const Cards = () => {
               <span>VER MAS</span>
             </StyledLink>
           </BodyCard>
-        </div>
-        <div
+        </Card>
+        <Card
           className="card col-auto p-5"
           onMouseEnter={(e) => setCambiarIcono3(true)}
           onMouseLeave={(e) => setCambiarIcono3(false)}
+          $darkMode={darkMode}
         >
           <Heding className="heding m-0-auto">
             {cambiarIcono3 ? (
@@ -144,8 +152,8 @@ const Cards = () => {
               <span>VER MAS</span>
             </StyledLink>
           </BodyCard>
-        </div>
-      </div>
+        </Card>
+      </Row>
     </CardContainer>
   );
 };
@@ -155,57 +163,56 @@ export default Cards;
 const CardContainer = styled.div`
   .row {
     gap: 2rem;
-    background-color: #6a1b9a;
     border-radius: 10px;
-    /* @media (min-width: 768px) {
-      position: relative;
-      height: auto;
-      max-width: 120rem;
-      width: 90%;
-      top: 55rem;
-      transform: translateX(-50%);
-      left: 50%;
-    } */
 
     .card {
-      background-color: #6a1b9a;
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-      border-radius: 10px;
-      border: none;
-      position: relative;
-      z-index: 1;
-      overflow: hidden;
-      transition: all 0.5s ease-in-out;
-      cursor: pointer;
-      ::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        background-color: #4ecdc4;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: scaleY(0);
-        z-index: -1;
-        transition: all 0.5s ease-in-out;
-        transform-origin: bottom;
-      }
-
-      &:hover {
-        transform: scale(1.06);
-
-        &::after {
-          transform: scaleY(1);
-        }
-        .heding {
-          transform: rotateY(360deg);
-          color: #000000;
-        }
-        .body {
-          color: #000000;
-        }
-      }
     }
+  }
+`;
+const Row = styled.div`
+  background-color: ${(props) =>
+    props.$darkMode
+      ? props.theme.dark.secondaryColor
+      : props.theme.light.primaryColor};
+`;
+const Card = styled.div`
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  color: white;
+  background-color: ${(props) =>
+    props.$darkMode
+      ? props.theme.dark.background
+      : props.theme.light.primaryColor};
+  &:hover {
+    transform: scale(1.06);
+    .heding {
+      transform: rotateY(360deg);
+    }
+    ::after {
+      transform: scaleY(1);
+    }
+  }
+  ::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.secondaryColor
+        : props.theme.light.secondaryColor};
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleY(0);
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+    transform-origin: bottom;
   }
 `;
 const BodyCard = styled.div`
@@ -228,9 +235,12 @@ const Heding = styled.div`
   border: 5px solid white;
   padding: 1rem;
   margin-bottom: 1rem;
+  
 
   svg {
     margin: auto;
+    border-radius: 50%;
+    background-color: transparent;
   }
 `;
 
@@ -242,6 +252,6 @@ const StyledLink = styled(Link)`
   font-weight: bold;
   font-size: 1.2rem;
   width: 100%;
-  text-align:center;
+  text-align: center;
   margin-top: 1rem;
 `;

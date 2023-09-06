@@ -8,6 +8,7 @@ export const theme = {
   },
   dark: {
     background: "#0d0114",
+    primaryColor: "#6a1b9a",
     secondaryColor: "#054047",
     textColor: "#f5f5f5",
     textTitle: "#fafafa",   
@@ -16,6 +17,8 @@ export const theme = {
     blueColor: "#5050e7",
     yellowColor: "#dff707",  
     mainFont: "Nunito Sans, sans-serif",
-    logoFont: "Nunito Sans, sans-serif"
+    logoFont: "Nunito Sans, sans-serif",
+    light: "#fafafa",
+    dark: "#263238",
   }
 };
