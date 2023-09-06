@@ -4,14 +4,15 @@ export const theme = {
     primaryColor: "#6a1b9a",
     secondaryColor: "#00bcd4",
     textColor: "#263238",
-    textTitle: "#000000",   
+    titleColor: "#272626",   
   },
   dark: {
     background: "#0d0114",
     primaryColor: "#6a1b9a",
+    primaryDeepColor: "#330c4b",
     secondaryColor: "#054047",
     textColor: "#f5f5f5",
-    textTitle: "#fafafa",   
+    titleColor: "#dad9d9",   
   },
   other: {
     blueColor: "#5050e7",

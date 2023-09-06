@@ -4,17 +4,25 @@ import { Link } from "react-router-dom";
 import Layout from "../layout/Layout";
 import { Cards, Cards2 } from "../components";
 import Slider from "../ui/Slider";
+import Ofrecemos from "../components/Ofrecemos";
+import useDark from "../helpers/useDark";
+import QuienesSomos from "../components/QuienesSomos";
 
 const Home = () => {
+  const { darkMode } = useDark();
   return (
     <>
       <Layout>
         <>
           <Slider />
-          <Cards />
-          <Cards2 />
+          {/* <Cards /> */}
+
+          <Ofrecemos />
+          <QuienesSomos />
           <div className="container d-flex justify-arnd align-center my-5">
-            <H4 className="m-0">Listo para empezar</H4>
+            <H4 className="m-0" $darkMode={darkMode}>
+              Listo para empezar
+            </H4>
             <StyledLink
               to="/contactanos"
               className="d-flex justify-center align-center"
@@ -31,55 +39,11 @@ const Home = () => {
 
 export default Home;
 
-const ImgContenedor = styled.div`
-  height: calc(100vh - 4.5rem);
-  position: relative;
-  .texto {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.7) 30% 70%,
-      rgba(0, 0, 0, 0)
-    );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    @media (min-width: 768px) {
-      padding: 5rem 30rem;
-      background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0),
-        rgba(0, 0, 0, 0.5) 30% 70%,
-        rgba(0, 0, 0, 0)
-      );
-    }
-    p {
-      color: white;
-      font-size: 2rem;
-      border-left: 1.5rem solid white;
-      height: 7rem;
-      text-align: center;
-      margin: 0;
-      letter-spacing: 0.5rem;
-      height: auto;
-      font-weight: bold;
-      padding: 1rem;
-      @media (min-width: 768px) {
-        font-size: 4rem;
-      }
-    }
-  }
-`;
-
 const H4 = styled.h4`
   font-weight: bold;
   font-size: 2.5rem;
+  color: ${(props) =>
+    props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
   @media (min-width: 768px) {
     font-size: 3rem;
   }

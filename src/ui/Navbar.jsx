@@ -137,7 +137,7 @@ const ContentContainer = styled.div`
         ? props.theme.dark.secondaryColor
         : props.theme.light.primaryColor};
   background-color: ${(props) =>
-    props.$darkMode ? props.theme.light.primaryColor : props.theme.other.light};
+    props.$darkMode ? props.theme.dark.primaryDeepColor : props.theme.other.light};
   position: fixed;
   z-index: 500;
 

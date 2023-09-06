@@ -37,7 +37,7 @@ const Content = styled.div`
   border-bottom: 0.5rem solid
     ${(props) =>
       props.$darkMode
-        ? props.theme.dark.secondaryColor
+        ? props.theme.other.light
         : props.theme.light.secondaryColor};
 
   background-color: ${(props) =>

@@ -6,12 +6,13 @@
   --light-primary-color: #6a1b9a;
   --light-secondary-color: #00bcd4;
   --light-text-color: #263238;
-  --light-text-title: #000000;
+  --light-text-title: #272626;
   
   /* DARK PALLETE  */
+  -light-primary-deep-color: #330c4b;
   --dark-background: #0d0114;
   --dark-text-color: #f5f5f5;
-  --light-text-title: #fafafa;
+  --light-text-title: #dad9d9;
 
   /* OTHER STYLES  */
   --blue-color: #5050e7;
@@ -185,7 +186,10 @@ ul {
 .background-solution-img{
   background-image: url(../src/assets/imagen5.jpg);
 }
-
+/* OFRECEMOS */
+.content-container{
+  background-image: url(../src/assets/soladura.jpg)
+}
 /* CARDS2 HOMEPAGE */
 .img-container1{
   background-image: url(../src/assets/photo1.jpg);
