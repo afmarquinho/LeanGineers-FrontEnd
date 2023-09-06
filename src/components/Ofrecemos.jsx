@@ -36,8 +36,8 @@ const Ofrecemos = () => {
                 Cuatro campos esenciales: la innovación continua, la mejora
                 continua, el liderazgo empoderado y la tecnología.
               </CardContent>
-              <StyledLink to="/about-us" $darkMode={darkMode}>
-                Conoce nuestro equipo
+              <StyledLink to="/solutions" $darkMode={darkMode}>
+               SABER MAS
               </StyledLink>
             </CardContainer>
           </Col>
@@ -54,8 +54,8 @@ const Ofrecemos = () => {
                 digitalización de datos y procesos, y estrategia de
                 transformación digital.
               </CardContent>
-              <StyledLink to="/about-us" $darkMode={darkMode}>
-                Conoce nuestro equipo
+              <StyledLink to="/solutions" $darkMode={darkMode}>
+                SABER MAS
               </StyledLink>
             </CardContainer>
           </Col>
