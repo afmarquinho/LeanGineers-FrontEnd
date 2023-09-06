@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import { styled } from "styled-components";
 import persona1 from "../assets/persona1.png";
 import persona2 from "../assets/persona2.png";
 import persona3 from "../assets/persona3.jpg";

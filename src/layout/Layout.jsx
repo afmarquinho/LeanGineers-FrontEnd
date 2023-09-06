@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import Contacto from "../ui/Contacto";
 import Navbar from "../ui/Navbar";
 import { Link } from "react-router-dom";
@@ -6,6 +5,8 @@ import { useContext } from "react";
 import DarkContext from "../context/DarkProvider";
 import { theme } from "../styles/theme";
 import useDark from "../helpers/useDark";
+import { styled } from "styled-components";
+
 
 const Layout = ({ children }) => {
   const { darkMode, setDarkMode } = useDark();
@@ -17,7 +18,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Contacto darkMode={darkMode} />
-      <Button className="m-0 p-0" onClick={darkActivation} darkMode={darkMode}>
+      <Button className="m-0 p-0" onClick={darkActivation}>
         {darkMode ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,5 @@
 import foto from "../assets/imagen1.jpg";
-import styled from "@emotion/styled";
+import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 import Layout from "../layout/Layout";
 import { Cards, Cards2 } from "../components";

@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import { styled } from "styled-components";
 import { useEffect, useState } from "react";
 import { History, Mision, Values, Vision } from "./";
 import { theme } from "../styles/theme";

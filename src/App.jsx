@@ -1,4 +1,3 @@
-import { Global, ThemeProvider, css } from "@emotion/react";
 import "./App.css";
 import "./Timeline.css";
 import "./normalize.css";
@@ -7,6 +6,7 @@ import { theme } from "./styles/theme";
 import GlobalStyles from "./styles/GlobalStyles";
 import { useContext } from "react";
 import DarkContext from "./context/DarkProvider";
+import { ThemeProvider } from "styled-components";
 
 
 

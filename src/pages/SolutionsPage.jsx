@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import { styled } from "styled-components";
 import Layout from "../layout/Layout";
 import chessSVG from "../assets/icons/chess.svg";
 import gearSVG from "../assets/icons/gear.svg";

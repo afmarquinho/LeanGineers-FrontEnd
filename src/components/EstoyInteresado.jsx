@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { consultorias, countries, cursos } from "../helpers/options";
-import styled from "@emotion/styled";
+import { styled } from "styled-components";
 
 const EstoyInteresado = () => {
   const [consultoria, setConsultoria] = useState(false);

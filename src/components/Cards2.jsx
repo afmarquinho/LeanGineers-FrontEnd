@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import foto from "../assets/photo1.jpg";
 import foto2 from "../assets/photo2.jpg";
 import foto3 from "../assets/photo3.jpg";
-import styled from "@emotion/styled";
+import { styled } from "styled-components";
 
 const Cards2 = () => {
   return (
