@@ -24,7 +24,7 @@ const QuienesSomos = () => {
                 maximice su potencial.
               </Content>
               <StyledLink to="/about-us" $darkMode={darkMode}>
-                Saber más
+                Conoce nuestro equipo
               </StyledLink>
             </ContentContainer>
           </Col>
