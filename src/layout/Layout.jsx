@@ -81,6 +81,7 @@ const Button = styled.button`
   border: none;
   position: fixed;
   z-index: 1000;
+  top: 50%;
   svg {
     color: ${(props) =>
       props.$darkMode

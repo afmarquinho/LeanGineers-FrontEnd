@@ -1,11 +1,14 @@
-import React from 'react'
+import { styled } from "styled-components";
+import useDark from "../helpers/useDark";
+
 
 const Vision = () => {
+  const { darkMode } = useDark();
   return (
     <div className="container-fluid">
     <div className="row">
       <div className="col-12">
-        <div className="vision">
+        <VisionContainer className="vision" $darkMode={darkMode}>
           <h3 className="vision__title m-0">Vision</h3>
           <p className="vision__content text-justify">
             Para el año 2030, Leangineers se habrá consolidado como
@@ -20,7 +23,7 @@ const Vision = () => {
             destaquen en un panorama empresarial en constante
             evolución.
           </p>
-        </div>
+        </VisionContainer>
       </div>
     </div>
   </div>
@@ -28,3 +31,18 @@ const Vision = () => {
 }
 
 export default Vision
+
+const VisionContainer = styled.div`
+  h3 {
+    color: ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.titleColor
+        : props.theme.light.titleColor};
+  }
+  p {
+    color: ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.textColor
+        : props.theme.light.textColor};
+  }
+`;

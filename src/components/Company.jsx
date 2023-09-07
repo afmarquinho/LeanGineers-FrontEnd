@@ -2,8 +2,11 @@ import { styled } from "styled-components";
 import { useEffect, useState } from "react";
 import { History, Mision, Values, Vision } from "./";
 import { theme } from "../styles/theme";
+import useDark from "../helpers/useDark";
 
 const Company = () => {
+  const { darkMode } = useDark();
+
   const [history, setHistory] = useState(true);
   const [mision, setMision] = useState(false);
   const [vision, setVision] = useState(false);
@@ -42,12 +45,13 @@ const Company = () => {
     <div className="container">
       <div className="row">
         <div className="col-12 col-md-3">
-          <Botones className="botones">
+          <Botones className="botones" $darkMode={darkMode}>
             <Boton
               type="button"
               onClick={onHistory}
               theme={theme}
               className={history ? "active" : ""}
+              $darkMode={darkMode}
             >
               Historia
             </Boton>
@@ -95,10 +99,11 @@ const Company = () => {
 // TODO: SEPARARLA HISTORIA EN COMPONENTES
 
 export default Company;
+
 const Botones = styled.div`
   .active {
     background-color: ${(props) => props.theme.light.secondaryColor};
-    color: ${(props) => props.theme.light.textLight};
+    color: ${(props) => props.theme.light.primaryColor};
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
@@ -119,7 +124,7 @@ const Boton = styled.button`
   }
   &:hover {
     background-color: ${(props) => props.theme.light.secondaryColor};
-    color: ${(props) => props.theme.light.textLight};
+    color: ${(props) => props.theme.light.primaryColor};
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }

@@ -2,6 +2,7 @@ export const theme = {
   light: {
     background: "#f2f2f2",
     primaryColor: "#6a1b9a",
+    primaryColorFaded: "#691b9a9d",
     secondaryColor: "#00bcd4",
     textColor: "#263238",
     titleColor: "#272626",   
@@ -9,6 +10,7 @@ export const theme = {
   dark: {
     background: "#0d0114",
     primaryColor: "#6a1b9a",
+    primaryColorFaded: "#0d0114d3",
     primaryDeepColor: "#330c4b",
     secondaryColor: "#054047",
     textColor: "#f5f5f5",

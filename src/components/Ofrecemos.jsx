@@ -96,10 +96,11 @@ const StyledContainer = styled(Col)`
 `;
 const Subtitulo = styled.h3`
   text-align: center;
-  color: ${(props) =>
+  /* color: ${(props) =>
     props.$darkMode
       ? props.theme.dark.titleColor
-      : props.theme.light.primaryColor};
+      : props.theme.light.primaryColor}; */
+      color: ${props => props.theme.other.yellowColor};
 `;
 const CardContainer = styled.div`
   text-align: justify;

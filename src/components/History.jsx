@@ -1,11 +1,13 @@
 import { styled } from "styled-components";
+import useDark from "../helpers/useDark";
 
 const History = () => {
+  const { darkMode } = useDark();
   return (
     <div className="container-fluid">
       <div className="row">
         <div className="col-12">
-          <div className="history">
+          <HistoryContainer className="history"  $darkMode={darkMode}>
             <h3 className="history__title m-0">Trayectoria</h3>
             <div className="history__content">
               <p className="history__text text-justify">
@@ -34,7 +36,7 @@ const History = () => {
                 nuevos elementos como la Innovación y las nuevas tecnologías.
               </p>
             </div>
-          </div>
+          </HistoryContainer>
         </div>
       </div>
     </div>
@@ -46,3 +48,15 @@ export default History;
 const Span = styled.span`
   font-weight: bold;
 `;
+const HistoryContainer = styled.div`
+h3{
+  color: ${(props) =>
+    props.$darkMode
+      ? props.theme.dark.titleColor
+      : props.theme.light.titleColor};
+}
+p{
+  color: ${(props) =>
+    props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
+}
+`

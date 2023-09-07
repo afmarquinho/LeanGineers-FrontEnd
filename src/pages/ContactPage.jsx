@@ -2,8 +2,10 @@ import { styled } from "styled-components";
 import Layout from "../layout/Layout";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useDark from "../helpers/useDark";
 
 const ContactPage = () => {
+  const { darkMode } = useDark();
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [asunto, setAsunto] = useState("");
@@ -24,15 +26,20 @@ const ContactPage = () => {
   return (
     <Layout>
       <>
-        <Container className="container p-5;">
+        <Container className="container p-5;" $darkMode={darkMode}>
           <div className="row ">
             <div className="col-12">
-              <h2 className="text-center my-5">Contáctanos</h2>
+              <Title className="text-center my-5" $darkMode={darkMode}>
+                Contáctanos
+              </Title>
             </div>
           </div>
           <div className="row m-0 w-100 d-flex justify-center">
             <div className="col-12 col-md-4 col-lg-3 p-5 bg-secundario ">
-              <DatosContacto className="datos-contacto order-2 order-md-1 h-100 text-white">
+              <DatosContacto
+                className="datos-contacto order-2 order-md-1 h-100 text-white"
+                $darkMode={darkMode}
+              >
                 <div className="correo me-3">
                   <p className="p-0 m-0 font-bold">Correo</p>
                   <svg
@@ -48,7 +55,7 @@ const ContactPage = () => {
                       d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25"
                     />
                   </svg>
-                  correo@correo.com
+                  <span>correo@correo.com</span>
                 </div>
                 <div className="localizacion my-3">
                   <p className="p-0 m-0 font-bold">Dirección</p>
@@ -71,7 +78,7 @@ const ContactPage = () => {
                       d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                     />
                   </svg>
-                  kra ### calle ###, ciudad, país.
+                  <span> kra ### calle ###, ciudad, país.</span>
                 </div>
                 <div className="telefonos my-3">
                   <p className="p-0 m-0 font-bold">Teléfono</p>{" "}
@@ -89,7 +96,7 @@ const ContactPage = () => {
                       d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
                     />
                   </svg>
-                  (000)1234567- (000)1234567
+                  <span>(000)1234567- (000)1234567</span>
                 </div>
                 <br />
                 <p className="font-bold">También encuentranos en:</p>
@@ -184,64 +191,76 @@ const ContactPage = () => {
               </DatosContacto>
             </div>
 
-            <div className="col-12 col-md-7 col-lg-4 p-5 formulario order-1 order-md-1 bg-white">
+            <FormContainer
+              className="col-12 col-md-7 col-lg-5 p-5 formulario order-1 order-md-1"
+              $darkMode={darkMode}
+            >
               <Form action="" onSubmit={onSubmit} className="">
                 {alerta && <Alerta>{alerta}</Alerta>}
                 <div className="input-group d-flex-column w-100">
-                  <label className="nombre-label" htmlFor="nombre">
+                  <Label
+                    className="nombre-label"
+                    htmlFor="nombre"
+                    $darkMode={darkMode}
+                  >
                     Nombre
-                  </label>
-                  <input
+                  </Label>
+                  <Input
                     className="nombre-input"
                     type="text"
                     name="nombre"
                     id="nombre"
                     value={nombre}
                     onChange={(e) => setNombre(e.target.value)}
+                    $darkMode={darkMode}
                   />
                 </div>
                 <div className="input-group d-flex-column">
-                  <label className="email-label" htmlFor="email">
+                  <Label className="email-label" htmlFor="email" $darkMode={darkMode}>
                     Correo Electrónico
-                  </label>
-                  <input
+                  </Label>
+                  <Input
                     className="email-input"
                     type="email"
                     name="email"
                     id="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    $darkMode={darkMode}
                   />
                 </div>
                 <div className="input-group d-flex-column">
-                  <label className="asunto-label" htmlFor="asunto">
+                  <Label className="asunto-label" htmlFor="asunto" $darkMode={darkMode}>
                     Asunto
-                  </label>
-                  <input
+                  </Label>
+                  <Input
                     className="asunto-input"
                     type="text"
                     name="asunto"
                     id="asunto"
                     value={asunto}
                     onChange={(e) => setAsunto(e.target.value)}
+                    $darkMode={darkMode}
                   />
                 </div>
                 <div className="input-group d-flex-column">
-                  <label className="asunto-label" htmlFor="mensaje">
+                  <Label className="asunto-label" htmlFor="mensaje" $darkMode={darkMode}>
                     Mensaje
-                  </label>
-                  <textarea
+                  </Label>
+                  <Textarea
                     className="mensaje-textarea"
                     name="mensaje"
                     id="mensaje"
                     value={mensaje}
                     onChange={(e) => setMensaje(e.target.value)}
+                    $darkMode={darkMode}
                   />
                 </div>
                 <div className="input-group  my-3">
-                  <label
+                  <Label
                     htmlFor="consent"
                     className="consent-label text-justify"
+                    $darkMode={darkMode}
                   >
                     <input
                       className="consent-checkbox"
@@ -263,11 +282,11 @@ const ContactPage = () => {
                       <span className="asterisco">correo@correo.com</span> y
                       ante las entidades de control estatal.
                     </span>
-                  </label>
+                  </Label>
                 </div>
-                <Enviar type="submit" value="ENVIAR" />
+                <Enviar type="submit" value="ENVIAR" $darkMode={darkMode}/>
               </Form>
-            </div>
+            </FormContainer>
           </div>
         </Container>
       </>
@@ -286,7 +305,17 @@ const Container = styled.div`
     margin-top: 6.5rem;
   }
 `;
+const Title = styled.h2`
+  color: ${(props) =>
+    props.$darkMode
+      ? props.theme.dark.titleColor
+      : props.theme.light.titleColor};
+`;
 
+const FormContainer = styled.div`
+  background-color: ${(props) =>
+    props.$darkMode ? props.theme.dark.backbround : props.theme.other.light};
+`;
 const Form = styled.form`
   width: 100%;
   margin-top: 2rem;
@@ -313,7 +342,7 @@ const Form = styled.form`
   div .consent-label {
     font-size: 1.2rem;
     line-height: 1;
-    .asterisco{
+    .asterisco {
       color: red;
     }
   }
@@ -321,13 +350,26 @@ const Form = styled.form`
     margin-right: 2rem;
   }
 `;
+const Label = styled.label`
+  color: ${(props) =>
+    props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
+`;
+const Input = styled.input`
+  color: ${(props) =>
+    props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
+`;
+const Textarea = styled.textarea`
+  color: ${(props) =>
+    props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
+`;
 const Enviar = styled.input`
   width: 100%;
-  background-color: #00bcd4;
+  background-color: ${props => props.$darkMode ? props.theme.dark.secondaryColor : props.theme.light.secondaryColor};;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 10px !important;
   border: 1px solid #005f6b;
-  color: #000000;
+  color: ${(props) =>
+    props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
   font-weight: bold;
   padding: 1rem 3rem;
   margin-top: 1rem;
@@ -346,9 +388,25 @@ const Alerta = styled.p`
 `;
 const DatosContacto = styled.div`
   margin-top: 2rem;
+  p {
+    color: ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.textColor
+        : props.theme.light.textColor};
+  }
+  span {
+    color: ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.textColor
+        : props.theme.light.textColor};
+  }
   div svg {
     height: 20px;
     margin-right: 1rem;
+    color: ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.textColor
+        : props.theme.light.textColor};
   }
 `;
 const StyledLink = styled(Link)`

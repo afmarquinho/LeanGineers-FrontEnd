@@ -5,14 +5,16 @@ import gearSVG from "../assets/icons/gear.svg";
 import tacticSVG from "../assets/icons/tactic.svg";
 import { Link } from "react-router-dom";
 import EstoyInteresado from "../components/EstoyInteresado";
+import useDark from "../helpers/useDark";
 
 // TODO: PONER UN BOTON DE WAP STATICO
 
 const SolutionsPage = () => {
+  const { darkMode } = useDark()
   return (
     <Layout>
       <div className="container-fluid p-0">
-        <IMGBackground className="row background-solution-img ovf-hidden">
+        <IMGBgBanner className="row background-solution-img ovf-hidden" $darkMode={darkMode}>
           <div className="col-12 p-0">
             <div className="container h-100">
               <div className="row h-100">
@@ -24,7 +26,7 @@ const SolutionsPage = () => {
               </div>
             </div>
           </div>
-        </IMGBackground>
+        </IMGBgBanner>
       </div>
       <div className="container my-5">
         <div className="row  d-flex justify-center align-center">
@@ -274,7 +276,6 @@ const SolutionsPage = () => {
           </div>
         </div>
       </div>
-
       <EstoyInteresado />
     </Layout>
   );
@@ -331,13 +332,13 @@ const Button = styled.button`
   bottom: 0;
   font-size: 1.6rem;
 `;
-const IMGBackground = styled.div`
+const IMGBgBanner= styled.div`
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center -100px;
   position: relative;
-  height: calc(50vh);
+  height: calc(100vh - 4rem);
   @media (min-width: 768px) {
     height: calc(100vh - 12rem);
     margin-top: 8rem;
@@ -350,18 +351,21 @@ const IMGBackground = styled.div`
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #691b9a9d;
+    background-color: ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.primaryColorFaded
+        : props.theme.light.primaryColorFaded};
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 10;
+    z-index: 100;
   }
 `;
 const BannerContent = styled.div`
   width: 90%;
   height: calc(100vh - 4rem);
   position: relative;
-  z-index: 100;
+  z-index: 10;
   @media (min-width: 768px) {
     height: calc(100vh - 12rem);
     width: 100%;

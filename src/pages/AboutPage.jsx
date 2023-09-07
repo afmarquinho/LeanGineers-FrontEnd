@@ -2,16 +2,20 @@ import React from "react";
 import Layout from "../layout/Layout";
 import foto from "../assets/photo3.jpg";
 import { styled } from "styled-components";
-import History from "../components/History";
 import OurTeam from "../components/OurTeam";
 import Company from "../components/Company";
+import useDark from "../helpers/useDark";
 
 const AboutPage = () => {
+  const { darkMode } = useDark();
   return (
     <Layout>
       <>
         <div className="container-fluid p-0">
-          <IMGBgBanner className="row banner-img ovf-hidden">
+          <IMGBgBanner
+            className="row banner-img ovf-hidden"
+            $darkMode={darkMode}
+          >
             <div className="col-12 p-0">
               <div className="container h-100">
                 <div className="row h-100">
@@ -42,26 +46,27 @@ const AboutPage = () => {
                 <IMGContainer2 className="about__img-container ovf-hidden d-flex justify-center align-center">
                   <img src={foto} alt="about__img" />
                 </IMGContainer2>
-                <Caption2 className="about__text-container">
+                <Caption2
+                  className="about__text-container"
+                  $darkMode={darkMode}
+                >
                   <h3 className="banner__titulo">¿Quienes somos?</h3>
                   <p className="about__text m-0 text-justify">
-                    En Leangineers somos una organización orientada a la
-                    consultoría y formación, en la que ponemos al servicio de
-                    nuestros clientes un enfoque holístico que promueve la
-                    implementación de la mejora continua, la innovación, la
-                    tecnología y el liderazgo, con el ánimo de generar altos
-                    niveles de competitividad en un entorno globalizado.
-                    Adicionalmente, entregamos toda nuestra experiencia y
-                    conocimientos a todos los profesionales con herramientas que
-                    les permiten ser agentes de cambio al interior de sus
-                    organizaciones.
+                    Leangineers es una organización orientada a la consultoría y
+                    formación, en la que ponemos al servicio de nuestros
+                    clientes un enfoque holístico que promueve la implementación
+                    de la mejora continua, la innovación, la tecnología y el
+                    liderazgo, con el ánimo de generar altos niveles de
+                    competitividad en un entorno globalizado. Adicionalmente,
+                    entregamos toda nuestra experiencia y conocimientos a todos
+                    los profesionales con herramientas que les permiten ser
+                    agentes de cambio al interior de sus organizaciones.
                   </p>
                 </Caption2>
               </About>
             </div>
           </div>
         </div>
-        {/* <History /> */}
         <Company />
         <OurTeam />
       </>
@@ -86,7 +91,10 @@ const IMGBgBanner = styled.div`
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #691b9a9d;
+    background-color: ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.primaryColorFaded
+        : props.theme.light.primaryColorFaded};
     position: absolute;
     top: 0;
     right: 0;
@@ -98,7 +106,7 @@ const BannerContent = styled.div`
   width: 90%;
   position: relative;
   z-index: 100;
-  
+
   @media (min-width: 768px) {
     width: 100%;
   }
@@ -161,5 +169,17 @@ const Caption2 = styled.div`
     border-left: 1px solid gray;
     width: 60%;
     padding-left: 2rem;
+  }
+  h3 {
+    color: ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.titleColor
+        : props.theme.light.titleColor};
+  }
+  p {
+    color: ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.textColor
+        : props.theme.light.textColor};
   }
 `;

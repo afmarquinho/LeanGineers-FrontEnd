@@ -3,22 +3,27 @@ import persona1 from "../assets/persona1.png";
 import persona2 from "../assets/persona2.png";
 import persona3 from "../assets/persona3.jpg";
 import persona4 from "../assets/persona4.png";
+import useDark from "../helpers/useDark";
 
 const OurTeam = () => {
+  const { darkMode } = useDark();
   return (
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <Titulo>Nuestro Equipo</Titulo>
+          <Titulo $darkMode={darkMode}>Nuestro Equipo</Titulo>
           <Cards className="cards">
-            <Card className="card">
-              <Cargo className="card__cargo">
+            <Card className="card" $darkMode={darkMode}>
+              <Cargo className="card__cargo" $darkMode={darkMode}>
                 Nombre y Aprellido
                 <br /> <span>CARGO</span>
               </Cargo>
               <img className="card__img" src={persona1} alt="foto1" />
               <div className="card__caption d-flex-column justify-center align-center">
-                <Name className="caption__title text-center">
+                <Name
+                  className="caption__title text-center"
+                  $darkMode={darkMode}
+                >
                   Nombre y Apellido
                 </Name>
                 <Text className="caption__content">
@@ -29,14 +34,17 @@ const OurTeam = () => {
               </div>
             </Card>
 
-            <Card className="card">
-              <Cargo className="card__cargo">
+            <Card className="card" $darkMode={darkMode}>
+              <Cargo className="card__cargo" $darkMode={darkMode}>
                 Nombre y Aprellido
                 <br /> <span>CARGO</span>
               </Cargo>
               <img className="card__img" src={persona2} alt="foto1" />
               <div className="card__caption d-flex-column justify-center align-center">
-                <Name className="caption__title text-center">
+                <Name
+                  className="caption__title text-center"
+                  $darkMode={darkMode}
+                >
                   Nombre y Apellido
                 </Name>
                 <Text className="caption__content">
@@ -47,14 +55,17 @@ const OurTeam = () => {
               </div>
             </Card>
 
-            <Card className="card">
-              <Cargo className="card__cargo">
+            <Card className="card" $darkMode={darkMode}>
+              <Cargo className="card__cargo" $darkMode={darkMode}>
                 Nombre y Aprellido
                 <br /> <span>CARGO</span>
               </Cargo>
               <img className="card__img" src={persona3} alt="foto1" />
               <div className="card__caption d-flex-column justify-center align-center">
-                <Name className="caption__title text-center">
+                <Name
+                  className="caption__title text-center"
+                  $darkMode={darkMode}
+                >
                   Nombre y Apellido
                 </Name>
                 <Text className="caption__content">
@@ -65,14 +76,17 @@ const OurTeam = () => {
               </div>
             </Card>
 
-            <Card className="card">
-              <Cargo className="card__cargo">
+            <Card className="card" $darkMode={darkMode}>
+              <Cargo className="card__cargo" $darkMode={darkMode}>
                 Nombre y Aprellido
                 <br /> <span>CARGO</span>
               </Cargo>
               <img className="card__img" src={persona4} alt="foto1" />
               <div className="card__caption d-flex-column justify-center align-center">
-                <Name className="caption__title text-center">
+                <Name
+                  className="caption__title text-center"
+                  $darkMode={darkMode}
+                >
                   Nombre y Apellido
                 </Name>
                 <Text className="caption__content">
@@ -91,6 +105,10 @@ const OurTeam = () => {
 
 export default OurTeam;
 const Titulo = styled.h3`
+  color: ${(props) =>
+    props.$darkMode
+      ? props.theme.dark.titleColor
+      : props.theme.light.titleColor};
   @media (min-width: 768px) {
     text-align: center;
   }
@@ -129,7 +147,14 @@ const Card = styled.div`
     text-align: justify;
     position: absolute;
     padding: 4rem 1rem 2rem 1rem;
-    background-color: rgba(0, 187, 212, 0.9);
+    color: ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.textColor
+        : props.theme.light.textColor};
+    background-color: ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.primaryColorFaded
+        : props.theme.light.secondaryColor};
     transform: translate(100%, 100%) rotate(360deg);
     transition: all 0.3s ease-in-out;
     @media (min-width: 768px) {
@@ -142,7 +167,10 @@ const Cargo = styled.span`
   position: absolute;
   bottom: 0;
   /* background-color: #000000; */
-  background-color: #6a1b9a;
+  background-color: ${(props) =>
+    props.$darkMode
+      ? props.theme.dark.primaryDeepColor
+      : props.theme.light.primaryColor};
   text-align: center;
   /* color: rgb(0, 187, 212); */
   color: white;
@@ -150,11 +178,14 @@ const Cargo = styled.span`
   padding: 1rem;
   line-height: 2rem;
   span {
-    color:#bbbbbb;
+    color: #bbbbbb;
   }
 `;
 const Name = styled.h4`
-  color: #000000;
+  color: ${(props) =>
+    props.$darkMode
+      ? props.theme.light.secondaryColor
+      : props.theme.light.titleColor};
   border-bottom: 4px solid white;
   margin-bottom: 1rem;
   width: 100%;
