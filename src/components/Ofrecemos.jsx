@@ -91,8 +91,8 @@ const Content = styled.p`
 const StyledContainer = styled(Col)`
   background-color: ${(props) =>
     props.$darkMode
-      ? props.theme.dark.background
-      : props.theme.light.secondaryColor};
+      ? "transparent"
+      : props.theme.other.soft};
 `;
 const Subtitulo = styled.h3`
   text-align: center;

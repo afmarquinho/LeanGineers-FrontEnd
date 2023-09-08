@@ -56,7 +56,7 @@ const Content = styled.p`
   background-color: ${(props) =>
     props.$darkMode
       ? props.theme.dark.background
-      : props.theme.light.secondaryColor};
+      : "white"};
   color: ${(props) =>
     props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
   text-align: justify;
