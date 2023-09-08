@@ -103,7 +103,7 @@ export default Company;
 const Botones = styled.div`
   .active {
     background-color: ${(props) => props.theme.light.secondaryColor};
-    color: ${(props) => props.theme.light.primaryColor};
+    color: ${(props) => props.theme.light.textColor};
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
@@ -113,7 +113,7 @@ const Boton = styled.button`
   width: 100%;
   margin: 0 0 0.5rem 0;
   padding: 1rem;
-  color: ${(props) => props.theme.light.secondaryColor};
+  color: ${(props) => props.theme.other.light};
   background-color: ${(props) => props.theme.light.primaryColor};
   border: none;
   border-radius: 0.5rem;
@@ -124,7 +124,7 @@ const Boton = styled.button`
   }
   &:hover {
     background-color: ${(props) => props.theme.light.secondaryColor};
-    color: ${(props) => props.theme.light.primaryColor};
+    color: ${(props) => props.theme.light.textColor};
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }

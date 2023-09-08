@@ -100,7 +100,7 @@ const Subtitulo = styled.h3`
     props.$darkMode
       ? props.theme.dark.titleColor
       : props.theme.light.primaryColor}; */
-      color: ${props => props.theme.other.yellowColor};
+      color: ${props => props.theme.dark.secondaryColor};
 `;
 const CardContainer = styled.div`
   text-align: justify;
