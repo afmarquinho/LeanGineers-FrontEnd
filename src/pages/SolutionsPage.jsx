@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import EstoyInteresado from "../components/EstoyInteresado";
 import useDark from "../helpers/useDark";
 import Banner from "../components/Banner";
-import BannerImg from "../assets/alimentos.jpg";
+import BannerImg from "../assets/produccion.jpg";
 
 // TODO: PONER UN BOTON DE WAP STATICO
 

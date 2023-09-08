@@ -3,9 +3,10 @@
 :root {
   /* LIGHT PALLETE */
   --light-background: #f2f2f2;
-  --light-primary-color: #6a1b9a;
-  --light-primary-color-degradado: #691b9a9d;
-  --light-secondary-color: #00bcd4;
+  --light-primary-color: #3498db;
+  --light-primary-color-degradado: #3498dbb3;
+  --light-secondary-color: #08642e;
+  --light-secondary-color-degradado: #2c3e50b3;
   --light-text-color: #263238;
   --light-text-title: #272626;
 
@@ -18,6 +19,7 @@
   /* OTHER STYLES  */
   --blue-color: #5050e7;
   --yellow-color: #dff707;
+  --yellow-color-deeper: #828f0a;
   --soft: #e5f4fd;
   --main-font: "Nunito Sans", sans-serif;
   --logo-font: "Nunito Sans", sans-serif;
