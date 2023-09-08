@@ -325,10 +325,10 @@ const Form = styled.form`
   div .asunto-input,
   div .mensaje-textarea {
     font-size: 1.4rem;
-    border: 1px solid #067d8d;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px !important;
     outline: none;
+    border: 1px solid #067d8d;
     background-color: #067d8d1f;
     margin-bottom: 0.5rem;
     resize: none;

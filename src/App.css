@@ -8,7 +8,7 @@
   --light-secondary-color: #00bcd4;
   --light-text-color: #263238;
   --light-text-title: #272626;
-  
+
   /* DARK PALLETE  */
   -light-primary-deep-color: #0d0114d3;
   --dark-background: #0d0114;
@@ -17,7 +17,7 @@
   --dark-primary-color-degradado: #691b9a9d;
   /* OTHER STYLES  */
   --blue-color: #5050e7;
-  --yellow-color: #dff707;  
+  --yellow-color: #dff707;
   --main-font: "Nunito Sans", sans-serif;
   --logo-font: "Nunito Sans", sans-serif;
 }
@@ -160,8 +160,7 @@ ul {
   font-weight: bold;
 }
 
-
-.text-start{
+.text-start {
   text-align: start;
 }
 
@@ -179,84 +178,78 @@ ul {
 .grand-container-slider {
   background-image: url(../src/assets/photo1.jpg);
 }
-/* BANNER PAGIAN ABOUT */
-.banner-img {
-  background-image: url(../src/assets/photo2.jpg);
-}
-/* FONDO PAGINA SOLUCIONES */
-.background-solution-img{
-  background-image: url(../src/assets/imagen5.jpg);
-}
+
 /* OFRECEMOS */
-.content-container{
-  background-image: url(../src/assets/soladura.jpg)
+.content-container {
+  background-image: url(../src/assets/soladura.jpg);
 }
 /* CARDS2 HOMEPAGE */
-.img-container1{
+.img-container1 {
   background-image: url(../src/assets/photo1.jpg);
 }
-.img-container2{
+.img-container2 {
   background-image: url(../src/assets/photo2.jpg);
 }
-.img-container3{
+.img-container3 {
   background-image: url(../src/assets/photo3.jpg);
 }
-.icon__chess{
+.icon__chess {
   fill: red;
 }
-.bg-light{
+.bg-light {
   background-color: #fcfcfc;
 }
-.bg-colored{
+.bg-colored {
   background-color: #6a1b9a;
   /* background-color: #00bcd4; */
 }
-.text-yellow{
+.text-yellow {
   color: #ffa600;
 }
-.text-pink{
+.text-pink {
   color: #e91e63;
 }
-.bg-light-danger{
+.bg-light-danger {
   background-color: #fff4f6;
 }
-.bg-lightBlue{
+.bg-lightBlue {
   background-color: #f0f9ff;
 }
-.bg-lightSuccess{
+.bg-lightSuccess {
   background-color: #f6fff7;
 }
-.bg-pink{
+.bg-pink {
   background-color: #e91e63;
 }
-.bg-lightPink{
+.bg-lightPink {
   background-color: #fff8fa;
 }
 
-.text-deepOrange{
+.text-deepOrange {
   color: #ff5722;
 }
-.bg-deepOrange{
+.bg-deepOrange {
   background-color: #ff5722;
 }
-.bg-lightOrange{
+.bg-lightOrange {
   background-color: #fff6f3;
 }
-.text-purple{
+.text-purple {
   color: #9c27b0;
 }
-.bg-purple{
+.bg-purple {
   background-color: #9c27b0;
 }
-.bg-lightPurple{
+.bg-lightPurple {
   background-color: #fef5ff;
 }
-.text-teal{
+.text-teal {
   color: #009688;
-}.bg-teal{
+}
+.bg-teal {
   background-color: #009688;
 }
-.bg-lightTeal{
-  background-color:  #f2fffe;
+.bg-lightTeal {
+  background-color: #f2fffe;
 }
-  /* CARDS DE SOLUCIONESk */
+/* CARDS DE SOLUCIONESk */

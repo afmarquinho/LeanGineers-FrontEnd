@@ -6,34 +6,26 @@ import tacticSVG from "../assets/icons/tactic.svg";
 import { Link } from "react-router-dom";
 import EstoyInteresado from "../components/EstoyInteresado";
 import useDark from "../helpers/useDark";
+import Banner from "../components/Banner";
+import BannerImg from "../assets/alimentos.jpg";
 
 // TODO: PONER UN BOTON DE WAP STATICO
 
 const SolutionsPage = () => {
-  const { darkMode } = useDark()
+  const { darkMode } = useDark();
   return (
     <Layout>
-      <div className="container-fluid p-0">
-        <IMGBgBanner className="row background-solution-img ovf-hidden" $darkMode={darkMode}>
-          <div className="col-12 p-0">
-            <div className="container h-100">
-              <div className="row h-100">
-                <div className="col-12">
-                  <BannerContent className="banner m-0-auto h-100 d-flex-column align-center justify-center">
-                    <Title className="banner__title">Soluciones</Title>
-                  </BannerContent>
-                </div>
-              </div>
-            </div>
-          </div>
-        </IMGBgBanner>
-      </div>
+      <Banner
+        title={"Soluciones"}
+        clase={"bg-banner-solutions-img"}
+        backgroundImage={BannerImg}
+      />
       <div className="container my-5">
         <div className="row  d-flex justify-center align-center">
           {/* //? -------------------> CARD INNOVACION <--------------------------*/}
-          <h2 className="text-center text-indigo">
+          <Title className="text-center text-indigo" $darkMode={darkMode}>
             CONSULTORÍAS EMPRESARIALES
-          </h2>
+          </Title>
           <div className="col-12 col-md-3 m-3">
             <Card className="card p-4 bg-light-danger d-flex-clumn justify-btw align-center">
               <div className="w-100">
@@ -196,7 +188,9 @@ const SolutionsPage = () => {
       <div className="container">
         <div className="row">
           <hr />
-          <h2 className="text-center text-indigo">FORMACIONES</h2>
+          <Title className="text-center text-indigo" $darkMode={darkMode}>
+            FORMACIONES
+          </Title>
 
           <div className="col-12 col-md-3 my-3">
             <Link to="#">
@@ -263,7 +257,10 @@ const SolutionsPage = () => {
               </Tecnologia>
             </Link>
           </div>
-          <div className="col-12 aditional--content my-5">
+          <InfoAdicional
+            className="col-12 aditional--content my-5"
+            $darkMode={darkMode}
+          >
             <h4>¿Por qué elegirnos?</h4>
             <ul>
               <li>Formacion de vaguardia</li>
@@ -273,7 +270,7 @@ const SolutionsPage = () => {
               <li>Precios inmejorables</li>
               <li>Harás parte de nuestra comunidad internacional</li>
             </ul>{" "}
-          </div>
+          </InfoAdicional>
         </div>
       </div>
       <EstoyInteresado />
@@ -332,52 +329,13 @@ const Button = styled.button`
   bottom: 0;
   font-size: 1.6rem;
 `;
-const IMGBgBanner= styled.div`
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center -100px;
-  position: relative;
-  height: calc(100vh - 4rem);
-  @media (min-width: 768px) {
-    height: calc(100vh - 12rem);
-    margin-top: 8rem;
-    /* //? ESTE DIV QUE ES EL FONDO SE PONE MARGEN DE 8 PARA QUE BAJE DEBAJO DE NAV, 
-    //? NO ES NECESARIO LA BARRA CONTENT YA TIENE POSICION STATIC, POR ESO SE RESTA 8 DEL 
-    //? NAVAR Y NO 12 DEL NAV MAS LA BARRA DE CONTACTO */
-  }
 
-  &::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: ${(props) =>
-      props.$darkMode
-        ? props.theme.dark.primaryColorFaded
-        : props.theme.light.primaryColorFaded};
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 100;
-  }
-`;
-const BannerContent = styled.div`
-  width: 90%;
-  height: calc(100vh - 4rem);
-  position: relative;
-  z-index: 10;
-  @media (min-width: 768px) {
-    height: calc(100vh - 12rem);
-    width: 100%;
-  }
-`;
-const Title = styled.h2`
-  color: #00e1ff;
+const Title = styled.h3`
+  color: ${(props) =>
+    props.$darkMode
+      ? props.theme.dark.titleColor
+      : props.theme.light.titleColor};
   text-transform: uppercase;
-
-  @media (min-width: 768px) {
-    letter-spacing: 1rem;
-  }
 `;
 const Innovacion = styled.div`
   background-color: #aed581;
@@ -452,4 +410,14 @@ const StyledLink = styled.p`
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
+`;
+const InfoAdicional = styled.div`
+  color: ${(props) =>
+    props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
+  h4 {
+    color: ${(props) =>
+      props.$darkMode
+        ? props.theme.dark.titleColor
+        : props.theme.light.titleColor};
+  }
 `;

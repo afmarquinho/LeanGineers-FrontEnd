@@ -5,40 +5,27 @@ import { styled } from "styled-components";
 import OurTeam from "../components/OurTeam";
 import Company from "../components/Company";
 import useDark from "../helpers/useDark";
+import Banner from "../components/Banner";
+import BannerImg from "../assets/fabrica.jpg";
 
 const AboutPage = () => {
   const { darkMode } = useDark();
+  const contenidoBanner = (
+    <>
+      Descubre el poder de la innovación y mejora continua con nuestras{" "}
+      <span>consultorías</span>, <span>entrenamientos empresariales</span> y{" "}
+      <span>formaciones</span>. Juntos, transformemos tu camino hacia el éxito.
+    </>
+  );
   return (
     <Layout>
       <>
-        <div className="container-fluid p-0">
-          <IMGBgBanner
-            className="row banner-img ovf-hidden"
-            $darkMode={darkMode}
-          >
-            <div className="col-12 p-0">
-              <div className="container h-100">
-                <div className="row h-100">
-                  <div className="col-12">
-                    <BannerContent className="banner m-0-auto h-100 d-flex-column justify-center align-center">
-                      <p className="banner__text">
-                        "Descubre el poder de la innovación y mejora continua
-                        con nuestras <span>consultorías</span>,{" "}
-                        <span>entrenamientos empresariales</span> y{" "}
-                        <span>formaciones</span>. Juntos, transformemos tu
-                        camino hacia el éxito."
-                      </p>
-                      <Title className="banner__title text-center">
-                        ¡Conócenos!
-                      </Title>
-                    </BannerContent>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </IMGBgBanner>
-        </div>
-
+        <Banner
+          title={"¡Conócenos!"}
+          contenido={contenidoBanner}
+          clase={"bg-banner-about-img"}
+          backgroundImage={BannerImg}
+        />
         <div className="container my-5">
           <div className="row">
             <div className="col-12">
@@ -75,70 +62,6 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
-
-const IMGBgBanner = styled.div`
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  height: calc(100vh - 4rem);
-  @media (min-width: 768px) {
-    height: calc(100vh - 12rem);
-    margin-top: 8rem;
-  }
-  &::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: ${(props) =>
-      props.$darkMode
-        ? props.theme.dark.primaryColorFaded
-        : props.theme.light.primaryColorFaded};
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 10;
-  }
-`;
-
-const BannerContent = styled.div`
-  width: 90%;
-  position: relative;
-  z-index: 100;
-
-  @media (min-width: 768px) {
-    width: 100%;
-  }
-  .banner__text {
-    color: white;
-    font-weight: 400;
-    font-size: 2rem;
-    text-align: center;
-    @media (min-width: 768px) {
-      font-size: 2.5rem;
-    }
-
-    span {
-      color: #dff707;
-      font-size: 2rem;
-      text-transform: uppercase;
-      font-weight: 900;
-      @media (min-width: 768px) {
-        font-size: 3rem;
-      }
-    }
-  }
-`;
-
-const Title = styled.h2`
-  color: #00e1ffc5;
-  text-transform: uppercase;
-
-  @media (min-width: 768px) {
-    letter-spacing: 1rem;
-  }
-`;
 
 const About = styled.div`
   display: flex;

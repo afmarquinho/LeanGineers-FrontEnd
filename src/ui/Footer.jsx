@@ -10,7 +10,7 @@ const Footer = () => {
     <>
       <hr />
       <Container fluid className="p-0 mt-5">
-        <Row className="row py-3 px-3 px-md-5 w-100" $darkMode={darkMode}>
+        <Row className="row py-3 px-3 px-md-5 w-100 m-0" $darkMode={darkMode}>
           <div className="col-6 col-md-4 order-2 order-md-1 d-flex justify-start">
             <Ul>
               <li>Conócenos</li>
