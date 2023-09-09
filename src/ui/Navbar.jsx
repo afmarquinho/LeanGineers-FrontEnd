@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useDark from "../helpers/useDark";
-import { theme } from "../styles/theme";
+
 
 const Navbar = () => {
   const [mostrarMenu, setMostrarMenu] = useState(false);
@@ -62,12 +62,12 @@ const Navbar = () => {
                 <span>Recursos</span>
               </StyledLink>
             </li>
-            {/* <li className="text-center" onClick={onChange}>
-                  <StyledLink to="#" className="link blog" $darkMode={darkMode}>
-                    {" "}
-                    <span>Blog</span>
-                  </StyledLink>
-                </li> */}
+            <li className="text-center" onClick={onChange}>
+              <StyledLink to="/blog" className="link blog" $darkMode={darkMode}>
+                {" "}
+                <span>Blog</span>
+              </StyledLink>
+            </li>
             {/* <li className="text-center" onClick={onChange}>
                   <StyledLink to="#" className="link reconocimientos" $darkMode={darkMode}>
                     {" "}
@@ -137,7 +137,9 @@ const ContentContainer = styled.div`
         ? props.theme.dark.secondaryColor
         : props.theme.light.primaryColor};
   background-color: ${(props) =>
-    props.$darkMode ? props.theme.dark.primaryDeepColor : props.theme.other.light};
+    props.$darkMode
+      ? props.theme.dark.primaryDeepColor
+      : props.theme.other.light};
   position: fixed;
   z-index: 500;
 
@@ -147,10 +149,9 @@ const ContentContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
   }
   @media (max-width: 768px) {
-    top:0;
+    top: 0;
   }
 `;
 

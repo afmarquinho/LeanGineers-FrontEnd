@@ -7,7 +7,6 @@ import consultoria from "../assets/consultoria.jpg";
 import virtual from "../assets/virtual.jpg";
 import { Link } from "react-router-dom";
 
-
 const Ofrecemos = () => {
   const { darkMode } = useDark();
   return (
@@ -27,7 +26,7 @@ const Ofrecemos = () => {
           </Col>
 
           <Col xs={12} md={6}>
-            <Subtitulo>Formaciones Virtuales</Subtitulo>
+            <Subtitulo $darkMode={darkMode}>Formaciones Virtuales</Subtitulo>
             <CardContainer>
               <ImgContainer>
                 <img src={virtual} alt="Consultorias" />
@@ -37,7 +36,7 @@ const Ofrecemos = () => {
                 continua, el liderazgo empoderado y la tecnología.
               </CardContent>
               <StyledLink to="/solutions" $darkMode={darkMode}>
-               SABER MAS
+                SABER MAS
               </StyledLink>
             </CardContainer>
           </Col>
@@ -90,17 +89,11 @@ const Content = styled.p`
 `;
 const StyledContainer = styled(Col)`
   background-color: ${(props) =>
-    props.$darkMode
-      ? "transparent"
-      : props.theme.other.soft};
+    props.$darkMode ? "transparent" : props.theme.other.soft};
 `;
 const Subtitulo = styled.h3`
   text-align: center;
-  /* color: ${(props) =>
-    props.$darkMode
-      ? props.theme.dark.titleColor
-      : props.theme.light.primaryColor}; */
-      color: ${props => props.theme.dark.secondaryColor};
+  color: ${(props) => props.theme.dark.secondaryColor};
 `;
 const CardContainer = styled.div`
   text-align: justify;
@@ -121,9 +114,9 @@ const ImgContainer = styled.div`
   }
 `;
 const CardContent = styled.p`
- color: ${(props) =>
+  color: ${(props) =>
     props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
-`
+`;
 const StyledLink = styled(Link)`
   width: 100%;
   margin-bottom: 1rem;

@@ -52,7 +52,11 @@ const ContentContainer = styled.div`
   }
 `;
 const Content = styled.p`
-  padding: 3rem;
+  padding: 2rem;
+  @media (min-width: 768px) {
+    padding: 5rem;
+    
+  }
   background-color: ${(props) =>
     props.$darkMode
       ? props.theme.dark.background
