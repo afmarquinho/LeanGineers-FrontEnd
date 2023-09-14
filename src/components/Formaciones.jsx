@@ -11,7 +11,7 @@ const Formaciones = () => {
   const { darkMode } = useDark();
   
   return (
-    <Container className="m-0 p-0">
+    <Container className="m-0-auto p-0">
       <Row className="m-0 p-0">
         <Col xs={12} className="m-0 p-0">
           <Title className="text-center text-indigo" $darkMode={darkMode}>

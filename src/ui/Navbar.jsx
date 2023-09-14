@@ -48,12 +48,12 @@ const Navbar = () => {
             </li>
             <li className="text-center" onClick={onChange}>
               <StyledLink
-                to="#"
+                to="/courses"
                 className="link entrenamiento"
                 $darkMode={darkMode}
               >
                 {" "}
-                <span>Entrenamiento</span>
+                <span>Cursos</span>
               </StyledLink>
             </li>
             <li className="text-center" onClick={onChange}>

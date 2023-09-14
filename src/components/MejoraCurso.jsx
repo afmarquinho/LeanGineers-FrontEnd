@@ -12,7 +12,7 @@ const MejoraCurso = () => {
 
   return (
     <Col xs={12} className="my-2 mx-1 p-0">
-      <CardContainer className="p-5 bg-lightSuccess" $darkMode={darkMode}>
+      <CardContainer className="p-5" $darkMode={darkMode}>
         <CardSubTitle
           className="p-0 mb-5 mt-0 card__subtitle"
           $darkMode={darkMode}
@@ -113,6 +113,7 @@ export default MejoraCurso;
 const CardContainer = styled.div`
   border: 1px solid
     ${(props) => (props.$darkMode ? props.theme.dark.secondaryColor : "gray")};
+    background-color:  ${(props) => (props.$darkMode ? props.theme.other.dark : "#c3e2f1")}
 `;
 const Card = styled.div`
   border-top: 1px solid
