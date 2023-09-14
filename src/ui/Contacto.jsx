@@ -42,7 +42,7 @@ const Content = styled.div`
 
   background-color: ${(props) =>
     props.$darkMode
-      ? props.theme.dark.primaryColor
+      ? props.theme.dark.background
       : props.theme.light.primaryColor};
   .correo {
     border-right: 1px solid white;

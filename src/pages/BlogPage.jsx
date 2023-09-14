@@ -236,9 +236,9 @@ const Title = styled.h2`
   text-align: center;
   text-transform: uppercase;
   color: ${(props) =>
-      props.$darkMode
-        ? props.theme.dark.secondaryColor
-        : props.theme.light.secondaryColor};
+    props.$darkMode
+      ? props.theme.dark.secondaryColor
+      : props.theme.light.secondaryColor};
 
   @media (min-width: 768px) {
     margin-top: 12rem;
@@ -249,6 +249,8 @@ const Card = styled.div`
   margin: 1rem;
   background-color: ${(props) =>
     props.$darkMode ? props.theme.dark.background : props.theme.other.light};
+  border: 1px solid ${(props) =>
+    props.$darkMode ? props.theme.dark.secondaryColor : "#272626f"};
 `;
 const CaptionContainer = styled.div`
   flex-basis: 60%;

@@ -10,7 +10,7 @@ export const theme = {
     fadedColor: "rgba(44, 62, 80, 0.7)",
   },
   dark: {
-    background: "#34495e",
+    background: "#0d0114;",
     primaryColor: "#2c3e50",
     primaryColorFaded: "#0d0114d3",
     primaryDeepColor: "#330c4b",
