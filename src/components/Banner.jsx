@@ -63,7 +63,7 @@ const IMGBgBanner = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     z-index: 300;
-    animation: zoomAnimation 50s infinite alternate;
+    animation: zoomAnimation 30s infinite alternate;
   }
   &::after {
     content: "";

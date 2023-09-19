@@ -74,6 +74,21 @@ h4 {
     font-size: 2rem;
   }
 }
+h5 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  @media (min-width: 768px) {
+    font-size: 1.7rem;
+  }
+}
+h6 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+  }
+}
+
 a {
   text-decoration: none;
 }

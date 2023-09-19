@@ -2,14 +2,53 @@ import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import styled from "styled-components";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useDark from "../helpers/useDark";
 import { Link } from "react-router-dom";
-import { InnovacionCurso, LiderazgoCurso, MejoraCurso, TecnologiaCurso } from ".";
+import {
+  InnovacionCurso,
+  LiderazgoCurso,
+  MejoraCurso,
+  TecnologiaCurso,
+} from ".";
 
 const Formaciones = () => {
   const { darkMode } = useDark();
-  
+  const [innovacion, setInnovacion] = useState(true);
+  const [mejora, setMejora] = useState(false);
+  const [liderazgo, setLiderazgo] = useState(false);
+  const [tecnologia, setTecnologia] = useState(false);
+
+  useEffect(() => {
+    setInnovacion(true);
+    setMejora(false);
+    setLiderazgo(false);
+    setTecnologia(false);
+  }, []);
+  const onInnovacion = () => {
+    setInnovacion(true);
+    setMejora(false);
+    setLiderazgo(false);
+    setTecnologia(false);
+  };
+  const onMejora = () => {
+    setInnovacion(false);
+    setMejora(true);
+    setLiderazgo(false);
+    setTecnologia(false);
+  };
+  const onLiderazgo = () => {
+    setInnovacion(false);
+    setMejora(false);
+    setLiderazgo(true);
+    setTecnologia(false);
+  };
+  const onTecnologia = () => {
+    setInnovacion(false);
+    setMejora(false);
+    setLiderazgo(false);
+    setTecnologia(true);
+  };
   return (
     <Container className="m-0-auto p-0">
       <Row className="m-0 p-0">
@@ -18,10 +57,45 @@ const Formaciones = () => {
             FORMACIONES
           </Title>
         </Col>
-        <InnovacionCurso/>
-        <MejoraCurso/>
-        <LiderazgoCurso/>
-        <TecnologiaCurso/>
+        <StyledCol xs={12} className="m-4 p-4">
+          <Button
+            className={`${innovacion ? "active" : " "}`}
+            onClick={onInnovacion}
+            $darkMode={darkMode}
+          >
+            Innovación
+          </Button>
+          <Button
+            className={`${mejora ? "active" : " "}`}
+            onClick={onMejora}
+            $darkMode={darkMode}
+          >
+            Mejora Continua
+          </Button>
+          <Button
+            className={`${liderazgo ? "active" : " "}`}
+            onClick={onLiderazgo}
+            $darkMode={darkMode}
+          >
+            Liderazgo
+          </Button>
+          <Button
+            className={`${tecnologia ? "active" : " "}`}
+            onClick={onTecnologia}
+            $darkMode={darkMode}
+          >
+            Tecnología
+          </Button>
+        </StyledCol>
+        {innovacion ? (
+          <InnovacionCurso />
+        ) : mejora ? (
+          <MejoraCurso />
+        ) : liderazgo ? (
+          <LiderazgoCurso />
+        ) : (
+          <TecnologiaCurso />
+        )}
       </Row>
     </Container>
   );
@@ -36,82 +110,20 @@ const Title = styled.h3`
       : props.theme.light.titleColor};
   text-transform: uppercase;
 `;
-
-
-
-
-
-const Mejora = styled.div`
-  background-color: #e1bee7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  line-height: 2rem;
-  .card__container {
-    width: 90%;
-    text-align: start;
-  }
-  :hover .campus-link {
-    background-color: #311b92;
+const StyledCol = styled(Col)`
+  border-bottom: 2px solid black;
+  .active {
+    border-bottom: 6px solid #3498db;
   }
 `;
-const Liderazgo = styled.div`
-  background-color: #fff59d;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  line-height: 2rem;
-  .card__container {
-    width: 90%;
-    text-align: start;
-  }
-  :hover .campus-link {
-    background-color: #311b92;
-  }
-`;
-const Tecnologia = styled.div`
-  background-color: #ffab91;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  line-height: 2rem;
-  .card__container {
-    width: 90%;
-    text-align: start;
-  }
-  :hover .campus-link {
-    background-color: #311b92;
-  }
-`;
-const StyledLink = styled.p`
-  background-color: #536dfe;
-  color: white;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-`;
-const Innovacion = styled.div`
-  background-color: #aed581;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  line-height: 2rem;
-  .card__container {
-    width: 90%;
-    text-align: start;
-  }
-  :hover .campus-link {
-    background-color: #311b92;
+const Button = styled.button`
+  color: ${(props) =>
+    props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
+  border: none;
+  border-bottom: 6px solid #cfd1d1b3;
+  padding: 2rem 3rem 1rem 3rem;
+  background-color: transparent;
+  &:hover {
+    border-bottom: 6px solid #3498db;
   }
 `;

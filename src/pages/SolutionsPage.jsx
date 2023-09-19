@@ -23,15 +23,18 @@ const SolutionsPage = () => {
         backgroundImage={BannerImg}
       />
       <Container>
-        <StyledRow className="d-flex justify-btw">
+        <StyledRow className="d-flex justify-content-center justify-content-lg-between">
           <Col xs={12}>
             <Title className="text-center text-indigo" $darkMode={darkMode}>
               CONSULTORÍAS EMPRESARIALES
             </Title>
           </Col>
 
-          <Col xs={12} lg={5} className="my-3">
-            <Card className="p-5 d-flex justify-end align-center" $darkMode={darkMode}>
+          <Col xs={11} md={6} lg={4} className="my-3">
+            <Card
+              className="p-5 d-flex justify-end align-center"
+              $darkMode={darkMode}
+            >
               <CardTitle className="text-white text-center">
                 Innovación
               </CardTitle>
@@ -51,8 +54,11 @@ const SolutionsPage = () => {
               </CardCaption>
             </Card>
           </Col>
-          <Col xs={12} lg={5} className="my-3">
-            <Card className="p-5 d-flex justify-end align-center" $darkMode={darkMode}>
+          <Col  xs={11} md={6} lg={4} className="my-3">
+            <Card
+              className="p-5 d-flex justify-end align-center"
+              $darkMode={darkMode}
+            >
               <CardTitle1 className="text-white text-center">
                 Workshops
               </CardTitle1>
@@ -68,8 +74,11 @@ const SolutionsPage = () => {
               </CardCaption>
             </Card>
           </Col>
-          <Col xs={12} lg={5} className="my-3">
-            <Card className="p-5 d-flex justify-end align-center" $darkMode={darkMode}>
+          <Col xs={11} md={6} lg={4} className="my-3">
+            <Card
+              className="p-5 d-flex justify-end align-center"
+              $darkMode={darkMode}
+            >
               <CardTitle2 className="text-white text-center">
                 Diseño de Sistemas de Gestión
               </CardTitle2>
@@ -87,8 +96,11 @@ const SolutionsPage = () => {
               </CardCaption>
             </Card>
           </Col>
-          <Col xs={12} lg={5} className="my-3">
-            <Card className="p-5 d-flex justify-end align-center" $darkMode={darkMode}>
+          <Col  xs={11} md={6} lg={4} className="my-3">
+            <Card
+              className="p-5 d-flex justify-end align-center"
+              $darkMode={darkMode}
+            >
               <CardTitle3 className="text-white text-center">
                 Inteligencia de Negocios
               </CardTitle3>
@@ -105,8 +117,11 @@ const SolutionsPage = () => {
               </CardCaption>
             </Card>
           </Col>
-          <Col xs={12} lg={5} className="my-3">
-            <Card className="p-5 d-flex justify-end align-center" $darkMode={darkMode}>
+          <Col  xs={11} md={6} lg={4} className="my-3">
+            <Card
+              className="p-5 d-flex justify-end align-center"
+              $darkMode={darkMode}
+            >
               <CardTitle4 className="text-white text-center">
                 Digitalización de Datos y Procesos
               </CardTitle4>
@@ -123,8 +138,11 @@ const SolutionsPage = () => {
               </CardCaption>
             </Card>
           </Col>
-          <Col xs={12} lg={5} className="my-3">
-            <Card className="p-5 d-flex justify-end align-center" $darkMode={darkMode}>
+          <Col  xs={11} md={6} lg={4} className="my-3">
+            <Card
+              className="p-5 d-flex justify-end align-center"
+              $darkMode={darkMode}
+            >
               <CardTitle5 className="text-white text-center">
                 Estrategia de Transformación Digital y Adopción de Tecnologías
                 Avanzadas
@@ -142,8 +160,11 @@ const SolutionsPage = () => {
               </CardCaption>
             </Card>
           </Col>
-          <Col xs={12} lg={5} className="my-3">
-            <Card className="p-5 d-flex justify-end align-center" $darkMode={darkMode}>
+          <Col  xs={11} md={6} lg={4} className="my-3">
+            <Card
+              className="p-5 d-flex justify-end align-center"
+              $darkMode={darkMode}
+            >
               <CardTitle6 className="text-white text-center">
                 Diseño e Implementación de Modelo Operativo
               </CardTitle6>
@@ -162,11 +183,11 @@ const SolutionsPage = () => {
           </Col>
         </StyledRow>
       </Container>
-      {/* //TODO: INFO ADICIONAL */}
       <EstoyInteresado />
     </Layout>
   );
 };
+// TODO: DEPURAR LOS ESTILOS QUE YA SE BORRARON DE SOLUTION PAGE Y SIMILARES Y CURSOSPAGE
 
 export default SolutionsPage;
 
@@ -178,16 +199,6 @@ const Title = styled.h3`
   text-transform: uppercase;
 `;
 
-const InfoAdicional = styled.div`
-  color: ${(props) =>
-    props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
-  h4 {
-    color: ${(props) =>
-      props.$darkMode
-        ? props.theme.dark.titleColor
-        : props.theme.light.titleColor};
-  }
-`;
 // ______________________________________________________________
 // ______________________________________________________________
 const StyledRow = styled(Row)`
@@ -199,11 +210,9 @@ const Card = styled.div`
   position: relative;
   height: 30rem;
   background-color: ${(props) =>
-    props.$darkMode
-      ? props.theme.other.dark
-      : "white"};
+    props.$darkMode ? props.theme.other.dark : "white"};
 `;
-const CardTitle = styled.h4`
+const CardTitle = styled.h6`
   width: 40%;
   height: 60%;
   padding: 1rem;
@@ -224,9 +233,7 @@ const CardTitle = styled.h4`
 const CardCaption = styled.div`
   width: 60%;
   color: ${(props) =>
-    props.$darkMode
-      ? props.theme.dark.textColor
-      : props.theme.light.textColor};
+    props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
 `;
 const Button = styled.button`
   border: none;
@@ -246,11 +253,11 @@ const CardTitle1 = styled(CardTitle)`
   );
 `;
 const CardTitle2 = styled(CardTitle)`
-  background-color: rgba(109, 194, 206,1);
+  background-color: rgba(109, 194, 206, 1);
   background-image: linear-gradient(
     to right top,
     transparent,
-    rgba(0, 183, 255,1)
+    rgba(0, 183, 255, 1)
   );
 `;
 const CardTitle3 = styled(CardTitle)`
@@ -258,7 +265,7 @@ const CardTitle3 = styled(CardTitle)`
   background-image: linear-gradient(
     to right top,
     transparent,
-    rgba(0, 183, 255,1)
+    rgba(0, 183, 255, 1)
   );
 `;
 const CardTitle4 = styled(CardTitle)`
@@ -266,7 +273,7 @@ const CardTitle4 = styled(CardTitle)`
   background-image: linear-gradient(
     to right top,
     transparent,
-    rgba(0, 183, 255,1)
+    rgba(0, 183, 255, 1)
   );
 `;
 const CardTitle5 = styled(CardTitle)`
@@ -279,9 +286,5 @@ const CardTitle5 = styled(CardTitle)`
 `;
 const CardTitle6 = styled(CardTitle)`
   background-color: #672bf1;
-  background-image: linear-gradient(
-    to right top,
-    transparent,
-    #87acf0
-  );
+  background-image: linear-gradient(to right top, transparent, #87acf0);
 `;
