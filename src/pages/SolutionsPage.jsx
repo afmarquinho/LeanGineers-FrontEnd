@@ -30,7 +30,7 @@ const SolutionsPage = () => {
             </Title>
           </Col>
 
-          <Col xs={11} md={6} lg={4} className="my-3">
+          <Col xs={11} md={6} lg={4} className="my-3 p-5">
             <Card
               className="p-5 d-flex justify-end align-center"
               $darkMode={darkMode}
@@ -38,23 +38,22 @@ const SolutionsPage = () => {
               <CardTitle className="text-white text-center">
                 Innovación
               </CardTitle>
-              <CardCaption $darkMode={darkMode}>
-                <ul className="card__list text-center m-0 p-0">
-                  <li className="card__item">Servicios</li>
-                  <li className="card__item">Canales</li>
-                  <li className="card__item">Marca</li>
-                  <li className="card__item">Procesos</li>
-                  <li className="card__item">Estructura</li>
-                  <li className="card__item">Modelos de Beneficos</li>
-                  <li className="card__item">Sistema de Producto</li>
-                </ul>
+              <CardCaption
+                $darkMode={darkMode}
+                className=""
+              >
+                <p>
+                  Servicios, Canales, Marca, Procesos, Estrcutura, Modelos de
+                  Beneficio, Sistema de Prodcuto
+                </p>
+
                 <Button className="card__btn p-3 font-bold w-100">
                   Saber Más
                 </Button>
               </CardCaption>
             </Card>
           </Col>
-          <Col  xs={11} md={6} lg={4} className="my-3">
+          <Col xs={11} md={6} lg={4} className="my-3 p-5">
             <Card
               className="p-5 d-flex justify-end align-center"
               $darkMode={darkMode}
@@ -62,19 +61,18 @@ const SolutionsPage = () => {
               <CardTitle1 className="text-white text-center">
                 Workshops
               </CardTitle1>
-              <CardCaption $darkMode={darkMode}>
-                <ul className="card__list text-center m-0 p-0">
-                  <li className="card__item">
-                    Enfocados a innovación y mejora continua.
-                  </li>
-                </ul>
+              <CardCaption
+                $darkMode={darkMode}
+                className=""
+              >
+                <p>Enfocados a innovación y mejora continua.</p>
                 <Button className="card__btn p-3 font-bold w-100 ">
                   Saber Más
                 </Button>
               </CardCaption>
             </Card>
           </Col>
-          <Col xs={11} md={6} lg={4} className="my-3">
+          <Col xs={11} md={6} lg={4} className="my-3 p-5">
             <Card
               className="p-5 d-flex justify-end align-center"
               $darkMode={darkMode}
@@ -83,20 +81,18 @@ const SolutionsPage = () => {
                 Diseño de Sistemas de Gestión
               </CardTitle2>
               <CardCaption $darkMode={darkMode}>
-                <ul className="card__list text-center m-0 p-0">
-                  <li className="card__item">NTC 5801 (Innovación)</li>
-                  <li className="card__item">NTC ISO 9001 (Calidad)</li>
-                  <li className="card__item">
-                    NTC ISO 27001 (Seguridad de la información)
-                  </li>
-                </ul>
+                <p>
+                  NTC 5801 (Innovación), NTC ISO 9001 (Calidad), NTC ISO 27001
+                  (Seguridad de la información)
+                </p>
+
                 <Button className="card__btn p-3 font-bold w-100">
                   Saber Más
                 </Button>
               </CardCaption>
             </Card>
           </Col>
-          <Col  xs={11} md={6} lg={4} className="my-3">
+          <Col xs={11} md={6} lg={4} className="my-3 p-5">
             <Card
               className="p-5 d-flex justify-end align-center"
               $darkMode={darkMode}
@@ -105,19 +101,18 @@ const SolutionsPage = () => {
                 Inteligencia de Negocios
               </CardTitle3>
               <CardCaption $darkMode={darkMode}>
-                <ul className="card__list text-center m-0 p-0">
-                  <li className="card__item">Lorem ipsum dolor sit.</li>
-                  <li className="card__item">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </li>
-                </ul>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam, dignissimos!
+                </p>
+
                 <Button className="card__btn p-3 font-bold w-100">
                   Saber Más
                 </Button>
               </CardCaption>
             </Card>
           </Col>
-          <Col  xs={11} md={6} lg={4} className="my-3">
+          <Col xs={11} md={6} lg={4} className="my-3 p-5">
             <Card
               className="p-5 d-flex justify-end align-center"
               $darkMode={darkMode}
@@ -126,41 +121,36 @@ const SolutionsPage = () => {
                 Digitalización de Datos y Procesos
               </CardTitle4>
               <CardCaption $darkMode={darkMode}>
-                <ul className="card__list text-center m-0 p-0">
-                  <li className="card__item">Lorem ipsum dolor sit.</li>
-                  <li className="card__item">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </li>
-                </ul>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam, dignissimos!
+                </p>
                 <Button className="card__btn p-3 font-bold w-100">
                   Saber Más
                 </Button>
               </CardCaption>
             </Card>
           </Col>
-          <Col  xs={11} md={6} lg={4} className="my-3">
+          <Col xs={11} md={6} lg={4} className="my-3 p-5">
             <Card
               className="p-5 d-flex justify-end align-center"
               $darkMode={darkMode}
             >
               <CardTitle5 className="text-white text-center">
-                Estrategia de Transformación Digital y Adopción de Tecnologías
-                Avanzadas
+                Transformación Digital y Tecnologías Avanzadas
               </CardTitle5>
               <CardCaption $darkMode={darkMode}>
-                <ul className="card__list text-center m-0 p-0">
-                  <li className="card__item">Lorem ipsum dolor sit.</li>
-                  <li className="card__item">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </li>
-                </ul>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam, dignissimos!
+                </p>
                 <Button className="card__btn p-3 font-bold w-100">
                   Saber Más
                 </Button>
               </CardCaption>
             </Card>
           </Col>
-          <Col  xs={11} md={6} lg={4} className="my-3">
+          <Col xs={11} md={6} lg={4} className="my-3 p-5">
             <Card
               className="p-5 d-flex justify-end align-center"
               $darkMode={darkMode}
@@ -169,12 +159,10 @@ const SolutionsPage = () => {
                 Diseño e Implementación de Modelo Operativo
               </CardTitle6>
               <CardCaption $darkMode={darkMode}>
-                <ul className="card__list text-center m-0 p-0">
-                  <li className="card__item">Lorem ipsum dolor sit.</li>
-                  <li className="card__item">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </li>
-                </ul>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quibusdam, dignissimos!
+                </p>
                 <Button className="card__btn p-3 font-bold w-100">
                   Saber Más
                 </Button>
@@ -214,7 +202,7 @@ const Card = styled.div`
 `;
 const CardTitle = styled.h6`
   width: 40%;
-  height: 60%;
+  height: 45%;
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -224,11 +212,6 @@ const CardTitle = styled.h6`
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   background-color: rgb(53, 195, 200);
-  background-image: linear-gradient(
-    to right top,
-    transparent,
-    rgba(87, 134, 235, 0.411)
-  );
 `;
 const CardCaption = styled.div`
   width: 60%;
@@ -238,7 +221,6 @@ const CardCaption = styled.div`
 const Button = styled.button`
   border: none;
   color: #ffffff;
-  background-color: #2ecca4;
   background-color: #5050e7;
   position: relative;
   bottom: 0;
@@ -246,45 +228,19 @@ const Button = styled.button`
 `;
 const CardTitle1 = styled(CardTitle)`
   background-color: rgba(13, 110, 253, 1);
-  background-image: linear-gradient(
-    to right top,
-    transparent,
-    rgb(149, 87, 235)
-  );
 `;
 const CardTitle2 = styled(CardTitle)`
   background-color: rgba(109, 194, 206, 1);
-  background-image: linear-gradient(
-    to right top,
-    transparent,
-    rgba(0, 183, 255, 1)
-  );
 `;
 const CardTitle3 = styled(CardTitle)`
   background-color: #004ef5;
-  background-image: linear-gradient(
-    to right top,
-    transparent,
-    rgba(0, 183, 255, 1)
-  );
 `;
 const CardTitle4 = styled(CardTitle)`
   background-color: #00e1ff;
-  background-image: linear-gradient(
-    to right top,
-    transparent,
-    rgba(0, 183, 255, 1)
-  );
 `;
 const CardTitle5 = styled(CardTitle)`
   background-color: #004ef5;
-  background-image: linear-gradient(
-    to right top,
-    transparent,
-    rgba(140, 0, 255, 1)
-  );
 `;
 const CardTitle6 = styled(CardTitle)`
   background-color: #672bf1;
-  background-image: linear-gradient(to right top, transparent, #87acf0);
 `;
