@@ -10,6 +10,8 @@ import { Banner, EstoyInteresado, Formaciones } from "../components";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
+import foto from "../assets/imagen5.jpg";
+import foto1 from "../assets/imagen1.jpg";
 
 // TODO: PONER UN BOTON DE WAP STATICO
 
@@ -30,18 +32,16 @@ const SolutionsPage = () => {
             </Title>
           </Col>
 
-          <Col xs={11} md={6} lg={4} className="my-3 p-5">
+          <Col xs={11} md={6} lg={4} className="my-1 p-5">
             <Card
-              className="p-5 d-flex justify-end align-center"
+              className="d-flex justify-btw align-center"
               $darkMode={darkMode}
             >
+              <CardImg className="img__container" $bgImage={foto}></CardImg>
               <CardTitle className="text-white text-center">
                 Innovación
               </CardTitle>
-              <CardCaption
-                $darkMode={darkMode}
-                className=""
-              >
+              <CardCaption $darkMode={darkMode}>
                 <p>
                   Servicios, Canales, Marca, Procesos, Estrcutura, Modelos de
                   Beneficio, Sistema de Prodcuto
@@ -53,18 +53,16 @@ const SolutionsPage = () => {
               </CardCaption>
             </Card>
           </Col>
-          <Col xs={11} md={6} lg={4} className="my-3 p-5">
+          <Col xs={11} md={6} lg={4} className="my-1 p-5">
             <Card
-              className="p-5 d-flex justify-end align-center"
+              className="d-flex justify-end align-center"
               $darkMode={darkMode}
             >
+              <CardImg1 className="img__container" $bgImage1={foto1}></CardImg1>
               <CardTitle1 className="text-white text-center">
                 Workshops
               </CardTitle1>
-              <CardCaption
-                $darkMode={darkMode}
-                className=""
-              >
+              <CardCaption $darkMode={darkMode}>
                 <p>Enfocados a innovación y mejora continua.</p>
                 <Button className="card__btn p-3 font-bold w-100 ">
                   Saber Más
@@ -72,11 +70,12 @@ const SolutionsPage = () => {
               </CardCaption>
             </Card>
           </Col>
-          <Col xs={11} md={6} lg={4} className="my-3 p-5">
+          <Col xs={11} md={6} lg={4} className="my-1 p-5">
             <Card
-              className="p-5 d-flex justify-end align-center"
+              className="d-flex justify-end align-center"
               $darkMode={darkMode}
             >
+              <CardImg2 className="img__container" $bgImage2={foto}></CardImg2>
               <CardTitle2 className="text-white text-center">
                 Diseño de Sistemas de Gestión
               </CardTitle2>
@@ -92,11 +91,12 @@ const SolutionsPage = () => {
               </CardCaption>
             </Card>
           </Col>
-          <Col xs={11} md={6} lg={4} className="my-3 p-5">
+          <Col xs={11} md={6} lg={4} className="my-1 p-5">
             <Card
-              className="p-5 d-flex justify-end align-center"
+              className="d-flex justify-end align-center"
               $darkMode={darkMode}
             >
+              <CardImg3 className="img__container" $bgImage3={foto1}></CardImg3>
               <CardTitle3 className="text-white text-center">
                 Inteligencia de Negocios
               </CardTitle3>
@@ -112,11 +112,12 @@ const SolutionsPage = () => {
               </CardCaption>
             </Card>
           </Col>
-          <Col xs={11} md={6} lg={4} className="my-3 p-5">
+          <Col xs={11} md={6} lg={4} className="my-1 p-5">
             <Card
-              className="p-5 d-flex justify-end align-center"
+              className="d-flex justify-end align-center"
               $darkMode={darkMode}
             >
+              <CardImg4 className="img__container" $bgImage4={foto}></CardImg4>
               <CardTitle4 className="text-white text-center">
                 Digitalización de Datos y Procesos
               </CardTitle4>
@@ -131,11 +132,12 @@ const SolutionsPage = () => {
               </CardCaption>
             </Card>
           </Col>
-          <Col xs={11} md={6} lg={4} className="my-3 p-5">
+          <Col xs={11} md={6} lg={4} className="my-1 p-5">
             <Card
-              className="p-5 d-flex justify-end align-center"
+              className="d-flex justify-end align-center"
               $darkMode={darkMode}
             >
+              <CardImg5 className="img__container" $bgImage5={foto1}></CardImg5>
               <CardTitle5 className="text-white text-center">
                 Transformación Digital y Tecnologías Avanzadas
               </CardTitle5>
@@ -152,9 +154,9 @@ const SolutionsPage = () => {
           </Col>
           <Col xs={11} md={6} lg={4} className="my-3 p-5">
             <Card
-              className="p-5 d-flex justify-end align-center"
+              className="d-flex justify-end align-center"
               $darkMode={darkMode}
-            >
+            ><CardImg6 className="img__container" $bgImage6={foto1}></CardImg6>
               <CardTitle6 className="text-white text-center">
                 Diseño e Implementación de Modelo Operativo
               </CardTitle6>
@@ -208,13 +210,15 @@ const CardTitle = styled.h6`
   justify-content: center;
   align-items: center;
   position: absolute;
-  left: -5%;
+  left: -15%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   background-color: rgb(53, 195, 200);
 `;
 const CardCaption = styled.div`
-  width: 60%;
+font-size:1.5rem;
+  padding: 1rem;
+  flex-basis: 65%;
   color: ${(props) =>
     props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
 `;
@@ -243,4 +247,30 @@ const CardTitle5 = styled(CardTitle)`
 `;
 const CardTitle6 = styled(CardTitle)`
   background-color: #672bf1;
+`;
+const CardImg = styled.div`
+  background-image: url(${(props) => props.$bgImage});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-basis: 40%;
+  height: 100%;
+`;
+const CardImg1 = styled(CardImg)`
+  background-image: url(${(props) => props.$bgImage1});
+`;
+const CardImg2 = styled(CardImg)`
+  background-image: url(${(props) => props.$bgImage2});
+`;
+const CardImg3 = styled(CardImg)`
+  background-image: url(${(props) => props.$bgImage3});
+`;
+const CardImg4 = styled(CardImg)`
+  background-image: url(${(props) => props.$bgImage4});
+`;
+const CardImg5 = styled(CardImg)`
+  background-image: url(${(props) => props.$bgImage5});
+`;
+const CardImg6 = styled(CardImg)`
+  background-image: url(${(props) => props.$bgImage6});
 `;
