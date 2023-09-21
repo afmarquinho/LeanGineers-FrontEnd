@@ -69,10 +69,15 @@ const ImgBanner = styled.div`
     content: "";
     width: 100%;
     height: 100%;
-    background-color: ${(props) =>
+    /* background-color: ${(props) =>
       props.$darkMode
         ? props.theme.dark.primaryColorFaded
-        : props.theme.dark.primaryColorFaded};
+        : props.theme.dark.primaryColorFaded}; */
+        background-image: linear-gradient(110deg, #0d0114d3,  #0d0114d3);
+        @media (min-width: 768px) {
+      background-image: linear-gradient(110deg, #0d0114 60% ,  transparent 60% 100%);
+      
+    }
     position: absolute;
     top: 0;
     right: 0;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { BannerCourse, EstoyInteresado } from "../components";
+import { BannerCourse, EstoyInteresado, NavbarCourse } from "../components";
 import Layout from "../layout/Layout";
-import backgroundImage from "../assets/fabrica.jpg";
+import backgroundImage from "../assets/imagen5.jpg";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
@@ -50,35 +50,51 @@ const CoursePage = () => {
           </Col>
         </Row>
       </Container>
+      <NavbarCourse />
+      <Container>
+        <Row>
+          <Col xs={12} className="m-0 p-0">
+            <h3 id="acerca">Acerca de este curso</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+              aliquid minima architecto dolore voluptas natus asperiores
+              accusamus, repellendus rerum distinctio placeat tempore sapiente!
+              Ipsa expedita illum autem facere beatae! Perferendis id magnam
+              inventore debitis laborum illo necessitatibus, eligendi rerum
+              accusantium.
+            </p>
+            <h3 id="dirigido">A quien va dirigido</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+              fugit praesentium voluptatibus doloribus rem earum quasi sunt sed
+              iure! Ea!
+            </p>
+          </Col>
+          <Col xs={12} className="m-0 p-0">
+            <h3 id="aprenderas">Que aprenderás</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+              aliquid minima architecto dolore voluptas natus asperiores
+              accusamus, repellendus rerum distinctio placeat tempore sapiente!
+              Ipsa expedita illum autem facere beatae! Perferendis id magnam
+              inventore debitis laborum illo necessitatibus, eligendi rerum
+              accusantium.
+            </p>
+          </Col>
+          <Col xs={12} className="m-0 p-0">
+            <h3 id="otros">Otros Cursos</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
+              aliquid minima architecto dolore voluptas natus asperiores
+              accusamus, repellendus rerum distinctio placeat tempore sapiente!
+              Ipsa expedita illum autem facere beatae! Perferendis id magnam
+              inventore debitis laborum illo necessitatibus, eligendi rerum
+              accusantium.
+            </p>
+          </Col>
+        </Row>
+      </Container>
       {/* //TODO: QUITAR CERTIFICADO DE CULMINACION HASTA ESTAR EN LA CAPACIDAD DE CERTIFICAR */}
-
-      <div>
-        <h3>Acerca de este curso</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid
-          minima architecto dolore voluptas natus asperiores accusamus,
-          repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita
-          illum autem facere beatae! Perferendis id magnam inventore debitis
-          laborum illo necessitatibus, eligendi rerum accusantium.
-        </p>
-      </div>
-      <div>
-        <h3>Que aprenderás</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid
-          minima architecto dolore voluptas natus asperiores accusamus,
-          repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita
-          illum autem facere beatae! Perferendis id magnam inventore debitis
-          laborum illo necessitatibus, eligendi rerum accusantium.
-        </p>
-      </div>
-      <div>
-        <h3>A quien va dirigido</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit
-          praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!
-        </p>
-      </div>
 
       <EstoyInteresado />
     </Layout>
@@ -88,12 +104,11 @@ const CoursePage = () => {
 export default CoursePage;
 const InfoAdiconal = styled.div`
   display: none;
-
   justify-content: space-evenly;
   align-items: center;
   position: relative;
   top: -20%;
-  z-index: 1000;
+  z-index: 500;
   padding: 3rem 0;
   background-color: ${(props) =>
     props.$darkMode
@@ -101,9 +116,15 @@ const InfoAdiconal = styled.div`
       : props.theme.light.secondaryColor};
   color: ${(props) =>
     props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
-  span {
-    font-weight: bold;
+  p {
+    text-align: center;
+    width: calc(100% / 4);
+    margin: 0;
+    span {
+      font-weight: bold;
+    }
   }
+
   @media (min-width: 768px) {
     display: flex;
   }

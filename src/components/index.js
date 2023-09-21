@@ -11,6 +11,7 @@ export { default as InnovacionCurso } from "./InnovacionCurso";
 export { default as LiderazgoCurso } from "./LiderazgoCurso";
 export { default as MejoraCurso } from "./MejoraCurso";
 export { default as Mision } from "./Mision";
+export { default as NavbarCourse } from "./NavbarCourse";
 export { default as Ofrecemos } from "./Ofrecemos";
 export { default as OurTeam } from "./OurTeam";
 export { default as Pagination } from "./Pagination";
