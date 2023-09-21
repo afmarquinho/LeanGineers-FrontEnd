@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { AboutPage, BlogPage, ContactPage, CursosPage, Home, SolutionsPage } from "../pages";
+import { AboutPage, BlogPage, ContactPage, CoursePage, CoursesPage, Home, SolutionsPage } from "../pages";
 
 const AppRouter = () => {
   return (
@@ -10,7 +10,8 @@ const AppRouter = () => {
         <Route path="contact-us" element={<ContactPage />} />
         <Route path="about-us" element={<AboutPage />} />
         <Route path="solutions" element={<SolutionsPage />} />
-        <Route path="courses" element={<CursosPage />} />
+        <Route path="courses" element={<CoursesPage />} />
+        <Route path="course/:id" element={<CoursePage />} />
         <Route path="blog" element={<BlogPage />} />
         <Route path="/*" element={<Navigate to="/" />} />
       </Routes>

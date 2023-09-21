@@ -1,4 +1,5 @@
 export { default as Banner } from "./Banner";
+export { default as BannerCourse } from "./BannerCourse";
 export { default as Cards } from "./Cards";
 export { default as Cards2 } from "./Cards2";
 export { default as Company } from "./Company";

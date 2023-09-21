@@ -7,7 +7,7 @@ import Layout from "../layout/Layout";
 import BannerImg from "../assets/laboratorio.jpg";
 import useDark from "../helpers/useDark";
 
-const Cursos = () => {
+const CoursesPage = () => {
   const { darkMode } = useDark();
   return (
     <Layout>
@@ -45,7 +45,7 @@ const Cursos = () => {
   );
 };
 
-export default Cursos;
+export default CoursesPage;
 
 const InfoAdicional = styled.div`
   color: ${(props) =>

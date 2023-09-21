@@ -4,6 +4,7 @@ import useDark from "../helpers/useDark";
 import { useState } from "react";
 import imagen1 from "../assets/imagen1.jpg";
 import Row from "react-bootstrap/esm/Row";
+import { Link } from "react-router-dom";
 
 const InnovacionCurso = () => {
   const { darkMode } = useDark();
@@ -36,7 +37,9 @@ const InnovacionCurso = () => {
                 <CourseContent className="course__content" $darkMode={darkMode}>
                   <p>Lo que aprenderás: lorem, lorem lorem, lorem</p>
                   <div className="botones d-flex justify-content-between w-100">
-                    <Mas className="mas">Saber mas</Mas>
+                    <MasLink className="mas" to="/course/123">
+                      Saber mas
+                    </MasLink>
                     <Comprar className="comprar">Comprar</Comprar>
                   </div>
                 </CourseContent>
@@ -56,7 +59,9 @@ const InnovacionCurso = () => {
                 <CourseContent className="course__content" $darkMode={darkMode}>
                   <p>Lo que aprenderás: lorem, lorem lorem, lorem</p>
                   <div className="botones d-flex justify-content-between w-100">
-                    <Mas className="mas">Saber mas</Mas>
+                    <MasLink className="mas" to="/course/123">
+                      Saber mas
+                    </MasLink>
                     <Comprar className="comprar">Comprar</Comprar>
                   </div>
                 </CourseContent>
@@ -71,12 +76,14 @@ const InnovacionCurso = () => {
               </CardImg>
               <CardCaption className="card__caption d-flex-column p-4">
                 <CourseName className="p-0 course__name" $darkMode={darkMode}>
-                  SForth Innovation Method
+                  Forth Innovation Method
                 </CourseName>
                 <CourseContent className="course__content" $darkMode={darkMode}>
                   <p>Lo que aprenderás: lorem, lorem lorem, lorem</p>
                   <div className="botones d-flex justify-content-between w-100">
-                    <Mas className="mas">Saber mas</Mas>
+                    <MasLink className="mas" to="/course/123">
+                      Saber mas
+                    </MasLink>
                     <Comprar className="comprar">Comprar</Comprar>
                   </div>
                 </CourseContent>
@@ -96,7 +103,9 @@ const InnovacionCurso = () => {
                 <CourseContent className="course__content" $darkMode={darkMode}>
                   <p>Lo que aprenderás: lorem, lorem lorem, lorem</p>
                   <div className="botones d-flex justify-content-between w-100">
-                    <Mas className="mas">Saber mas</Mas>
+                    <MasLink className="mas" to="/course/123">
+                      Saber mas
+                    </MasLink>
                     <Comprar className="comprar">Comprar</Comprar>
                   </div>
                 </CourseContent>
@@ -133,7 +142,7 @@ const Card = styled.div`
       ? props.theme.dark.titleColor
       : props.theme.light.titleColor};
   background-color: ${(props) =>
-    props.$darkMode ? props.theme.dark.background : "white" };
+    props.$darkMode ? props.theme.dark.background : "white"};
 `;
 const CardImg = styled.div`
   flex-basis: 40%;
@@ -166,14 +175,14 @@ const CourseContent = styled.div`
   color: ${(props) =>
     props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
 `;
-const Mas = styled.button`
+const MasLink = styled(Link)`
   width: 40%;
   border: none;
   padding: 0.5rem 2rem;
   background-color: #2ecc71;
   color: white;
 `;
-const Comprar = styled(Mas)`
+const Comprar = styled(MasLink)`
   background-color: #5050e7;
 `;
 

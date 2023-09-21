@@ -46,10 +46,7 @@ export default Banner;
 const IMGBgBanner = styled.div`
   position: relative;
   height: calc(100vh - 4rem);
-  @media (min-width: 768px) {
-    height: calc(100vh - 12rem);
-    margin-top: 8rem;
-  }
+   
   &::before {
     content: "";
     position: absolute;

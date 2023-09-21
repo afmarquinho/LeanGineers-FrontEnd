@@ -68,7 +68,7 @@ const EstoyInteresado = () => {
                 obligatoria al momento de llenar el formulario
               </span>
 
-              <div className="d-flex flex-column flex-lg-row">
+              <div className="d-flex flex-column flex-lg-row gap">
                 <div className="input-group d-flex-column my-3">
                   <Label htmlFor="name" $darkMode={darkMode}>
                     <span className="asterisco">*</span> Nombre y Apellido{" "}
@@ -76,7 +76,7 @@ const EstoyInteresado = () => {
                   <Input
                     type="text"
                     name="name"
-                    className="name p-3 me-2"
+                    className="name p-3"
                     $darkMode={darkMode}
                     placeholder="* Nombre y Apellido"
                   />
@@ -89,14 +89,14 @@ const EstoyInteresado = () => {
                   <Input
                     type="email"
                     name="email"
-                    className="email p-3 ms-2"
+                    className="email p-3"
                     $darkMode={darkMode}
                     placeholder="* correo@dominio.com"
                   />
                 </div>
               </div>
 
-              <div className="d-flex flex-column flex-lg-row">
+              <div className="d-flex flex-column flex-lg-row gap">
                 <div className="input-group d-flex-column my-3">
                   <Label htmlFor="tel" $darkMode={darkMode}>
                     <span className="asterisco">*</span>Teléfono
@@ -104,7 +104,7 @@ const EstoyInteresado = () => {
                   <Input
                     type="tel"
                     name="tel"
-                    className="tel p-3 me-2"
+                    className="tel p-3"
                     $darkMode={darkMode}
                     placeholder="* telefono, p.e.: +573101234567"
                   />
@@ -117,7 +117,7 @@ const EstoyInteresado = () => {
                   <Select
                     name="country"
                     id=""
-                    className="p-3 ms-2"
+                    className="p-3"
                     $darkMode={darkMode}
                     placeholder="país"
                   >
@@ -131,7 +131,7 @@ const EstoyInteresado = () => {
                 </div>
               </div>
 
-              <div className="d-flex flex-column flex-lg-row">
+              <div className="d-flex flex-column flex-lg-row gap">
                 <div className="input-group d-flex-column my-3">
                   <Label2 htmlFor="" $darkMode={darkMode}>
                     <span>*</span>Estoy interesado en:
@@ -140,7 +140,7 @@ const EstoyInteresado = () => {
                     name=""
                     id=""
                     onChange={onOption}
-                    className="p-3 me-2"
+                    className="p-3"
                     $darkMode={darkMode}
                   >
                     <option value="">--Seleccione--</option>
@@ -179,7 +179,7 @@ const EstoyInteresado = () => {
                         {" "}
                         <span>*</span>¿Cuál?
                       </Label2>
-                      <Select name="cual" id="" className="p-3 ms-2">
+                      <Select name="cual" id="" className="p-3">
                         <option value="">--Seleccione--</option>
                         {cursos.map((curso) => (
                           <option value={curso} key={curso}>
@@ -310,6 +310,9 @@ const Form = styled.form`
           ? props.theme.dark.textColor
           : props.theme.light.textColor};
     }
+  }
+  .gap{
+    gap: 1rem;
   }
 `;
 const Input = styled.input`
