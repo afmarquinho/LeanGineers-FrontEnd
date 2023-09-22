@@ -1,3 +1,4 @@
+export { default as Article } from "./Article";
 export { default as Banner } from "./Banner";
 export { default as BannerCourse } from "./BannerCourse";
 export { default as Cards } from "./Cards";

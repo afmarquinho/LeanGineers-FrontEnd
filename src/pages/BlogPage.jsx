@@ -24,6 +24,11 @@ const BlogPage = () => {
       <Title $darkMode={darkMode}>Blog</Title>
       <Container className="mx-auto p-0">
         <Row className="m-0 p-0">
+          <Col xs={12} className="p-0">
+            <span>Categorias</span>
+            <span>Categorias</span>
+            <span>Categorias</span>
+          </Col>
           <Col xs={12} lg={8} className="p-0">
             <Card
               className="card d-flex flex-column flex-md-row rounded-4 ovf-hidden p-0"
@@ -48,7 +53,7 @@ const BlogPage = () => {
                   <p>
                     Por: <span>Auto Apellido</span>
                   </p>
-                  <StyledLink to="#" $darkMode={darkMode}>
+                  <StyledLink to="/article/123" $darkMode={darkMode}>
                     Saber Mas
                   </StyledLink>
                 </div>
@@ -87,7 +92,7 @@ const BlogPage = () => {
                   <p>
                     Por: <span>Auto Apellido</span>
                   </p>
-                  <StyledLink2 to="#" $darkMode={darkMode}>
+                  <StyledLink2 to="/article/123" $darkMode={darkMode}>
                     Saber Mas
                   </StyledLink2>
                 </div>
@@ -126,7 +131,7 @@ const BlogPage = () => {
                   <p>
                     Por: <span>Auto Apellido</span>
                   </p>
-                  <StyledLink2 to="#" $darkMode={darkMode}>
+                  <StyledLink2 to="/article/123" $darkMode={darkMode}>
                     Saber Mas
                   </StyledLink2>
                 </div>
@@ -165,7 +170,7 @@ const BlogPage = () => {
                   <p>
                     Por: <span>Auto Apellido</span>
                   </p>
-                  <StyledLink2 to="#" $darkMode={darkMode}>
+                  <StyledLink2 to="/article/123" $darkMode={darkMode}>
                     Saber Mas
                   </StyledLink2>
                 </div>
@@ -204,7 +209,7 @@ const BlogPage = () => {
                   <p>
                     Por: <span>Auto Apellido</span>
                   </p>
-                  <StyledLink2 to="#" $darkMode={darkMode}>
+                  <StyledLink2 to="/article/123" $darkMode={darkMode}>
                     Saber Mas
                   </StyledLink2>
                 </div>
@@ -294,12 +299,9 @@ const CaptionContainer2 = styled(CaptionContainer)`
 const StyledLink = styled(Link)`
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: ${(props) =>
-    props.$darkMode
-      ? props.theme.dark.secondaryColor
-      : props.theme.light.secondaryColor};
+  background-color: transparent;
   color: ${(props) =>
-    props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
+    props.$darkMode ? props.theme.other.yellowColor : props.theme.light.primaryColor};
   font-weight: bold;
 `;
 const StyledLink2 = styled(StyledLink)`

@@ -211,7 +211,6 @@ const CardTitle = styled.h6`
   align-items: center;
   position: absolute;
   left: -15%;
-  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   background-color: rgb(53, 195, 200);
 `;

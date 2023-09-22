@@ -56,12 +56,12 @@ const Navbar = () => {
                 <span>Cursos</span>
               </StyledLink>
             </li>
-            <li className="text-center" onClick={onChange}>
+            {/* <li className="text-center" onClick={onChange}>
               <StyledLink to="#" className="link recursos" $darkMode={darkMode}>
                 {" "}
                 <span>Recursos</span>
               </StyledLink>
-            </li>
+            </li> */}
             <li className="text-center" onClick={onChange}>
               <StyledLink to="/blog" className="link blog" $darkMode={darkMode}>
                 {" "}

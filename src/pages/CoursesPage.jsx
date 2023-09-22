@@ -16,15 +16,17 @@ const CoursesPage = () => {
         clase={"bg-banner-solutions-img"}
         backgroundImage={BannerImg}
       />
-       <StyledContainer fluid $darkMode={darkMode} className="my-5 py-4" >
+      <Formaciones />
+
+      <StyledContainer fluid $darkMode={darkMode} className="mb-5 pt-5 pb-5">
         <Container>
           <Row>
             <Col xs={12}>
               <InfoAdicional
-                className="aditional--content my-5"
+                className="aditional--content"
                 $darkMode={darkMode}
               >
-                <h4>¿Por qué elegirnos?</h4>
+                <h2>¿Por qué elegirnos?</h2>
                 <ul>
                   <li>Formacion de vaguardia</li>
                   <li>100% virtual</li>
@@ -38,8 +40,6 @@ const CoursesPage = () => {
           </Row>
         </Container>
       </StyledContainer>
-      <Formaciones />
-     
       <EstoyInteresado />
     </Layout>
   );
@@ -49,16 +49,18 @@ export default CoursesPage;
 
 const InfoAdicional = styled.div`
   color: ${(props) =>
-    props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
-  h4 {
+    props.$darkMode ? props.theme.dark.textColor : props.theme.dark.textColor};
+  h2 {
     color: ${(props) =>
       props.$darkMode
         ? props.theme.dark.titleColor
-        : props.theme.light.titleColor};
+        : props.theme.dark.titleColor};
   }
 `;
 const StyledContainer = styled(Container)`
   background-color: ${(props) =>
-    props.$darkMode ? props.theme.dark.background : "white"};
-  clip-path: polygon(0% 0%, 100% 0, 100% 85%, 51% 100%, 0 85%);
+    props.$darkMode
+      ? props.theme.dark.background
+      : props.theme.light.primaryColor};
+clip-path: polygon(50% 0, 100% 0, 100% 100%, 0 100%, 0 0);
 `;

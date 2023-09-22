@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { AboutPage, BlogPage, ContactPage, CoursePage, CoursesPage, Home, SolutionsPage } from "../pages";
+import { AboutPage, ArticlePage, BlogPage, ContactPage, CoursePage, CoursesPage, Home, SolutionsPage } from "../pages";
 
 const AppRouter = () => {
   return (
@@ -13,6 +13,7 @@ const AppRouter = () => {
         <Route path="courses" element={<CoursesPage />} />
         <Route path="course/:id" element={<CoursePage />} />
         <Route path="blog" element={<BlogPage />} />
+        <Route path="article/:id" element={<ArticlePage/>} />
         <Route path="/*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
