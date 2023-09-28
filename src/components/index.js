@@ -1,10 +1,11 @@
 export { default as Article } from "./Article";
 export { default as Banner } from "./Banner";
 export { default as BannerCourse } from "./BannerCourse";
+export { default as CardConsultancy } from "./CardConsultancy";
+export { default as CardCourse } from "./CardCourse"
 export { default as Cards } from "./Cards";
 export { default as Cards2 } from "./Cards2";
 export { default as Company } from "./Company";
-export { default as CursoCard } from "./CursoCard";
 export { default as EstoyInteresado } from "./EstoyInteresado";
 export { default as Formaciones } from "./Formaciones";
 export { default as History } from "./History";

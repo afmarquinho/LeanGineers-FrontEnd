@@ -38,7 +38,7 @@ const CoursePage = () => {
                 <span>Duracion:</span> 6 meses
               </p>
               <p>
-                <span>Última Actualización: 2023</span> 6 meses
+                <span>Última Actualización: </span> 2023
               </p>
               <p>
                 <span>Nivel:</span> Principiante a experto

@@ -152,9 +152,9 @@ const Span = styled.span`
   color: white;
 `;
 const Topic = styled.span`
-  margin: 0.2rem;
+  margin: 0 1rem 0 0;
   padding: 0.5rem 1rem;
-  background-color: ${(props) => props.theme.light.secondaryColor};
+  background-color: ${(props) => props.theme.other.yellowColor};
   color: ${(props) => props.theme.light.textColor};
   border-radius: 16px;
   font-size: 1.4rem;

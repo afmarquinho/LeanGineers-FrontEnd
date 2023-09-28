@@ -1,0 +1,358 @@
+export const courses = [
+  // INNOVACION
+  {
+    type: "innovacion",
+    name: "Service Design",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Fulano de Tal",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "v94idaa32e81hbcbnlje046f7bt74g8",
+  },
+  {
+    type: "innovacion",
+    name: "Design Thinking Method Systematic Inventive Thinking",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Fulano de Tal",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "14tl9qk812o1hbccf379mijuvqm3l9g",
+  },
+  {
+    type: "innovacion",
+    name: "Systematic Inventive Thinking",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Fulano de Tal",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "crmv3dn252g1hbccf46nrmt107v0pro",
+  },
+  {
+    type: "innovacion",
+    name: "Forth Innovation Method",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Fulano de Tal",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "gdj00s33f21hbccf559fi26oh5gkr",
+  },
+  //   MEJORA
+  {
+    type: "mejora",
+    name: "Lean Management",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Fulano de Tal",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "ohvji3ld6co1hbccmttisji2qledn6o",
+  },
+  {
+    type: "mejora",
+    name: "Reingeniería",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Fulano de Tal",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "n19guccg2oo1hbccmur0fsi3shp6cig",
+  },
+  {
+    type: "mejora",
+    name: "Reingeniería",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Six Sigma (DMAIC, DMADV)",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "mjuthpol2hg1hbccmvpfvlmtgrb8mo8",
+  },
+  {
+    type: "mejora",
+    name: "Teoría de Restricciones (TOC)",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Six Sigma (DMAIC, DMADV)",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "pfp92165dbo1hbccn0nkh45imvp8ub8",
+  },
+  //   LIDERAZGO
+  {
+    type: "liderazgo",
+    name: "Gestión del cambio",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Fulano de Tal",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "obpfm00mo11hbccn1jpt8e5ugubang",
+  },
+  {
+    type: "liderazgo",
+    name: "Coaching",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Fulano de Tal",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "3e9sintltio1hbccsg8830f20dkl5ug",
+  },
+  {
+    type: "liderazgo",
+    name: "Toyota Kata",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Fulano de Tal",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "li71kd0he3g1hbccsf2v333nu4kso6",
+  },
+  {
+    type: "liderazgo",
+    name: "Liderazgo situacional",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Fulano de Tal",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "he0r800uru81hbccsed77k3kq2u9rv8",
+  },
+  // TECNOLOGÍA
+  {
+    type: "tecnologia",
+    name: "Big Data",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Fulano de Tal",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "69c5m7bvkto1hbccsd45qatubtea7j",
+  },
+  {
+    type: "tecnologia",
+    name: "Aprendizaje profundo",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Fulano de Tal",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "krgm4vpi3l81hbccscd2383b9afv8r",
+  },
+  {
+    type: "tecnologia",
+    name: "Aprendizaje Automático",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Fulano de Tal",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "e5g75cotglo1hbccsbjtt0c55pm8clg",
+  },
+  {
+    type: "tecnologia",
+    name: "Ciencia de datos",
+    resume: "lorem, lorem lorem, lorem",
+    tutor: "Fulano de Tal",
+    price: "$450",
+    oldPrice: "$500",
+    topic1: "topic1",
+    topic2: "topic2",
+    topic3: "topic3",
+    duration: "6 meses",
+    lastUpdating: "2023",
+    level: "Principiante a Experto",
+    certification: "Certificación de Culminación",
+    about:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    target:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit praesentium voluptatibus doloribus rem earum quasi sunt sed iure! Ea!",
+    willLearn:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, aliquid minima architecto dolore voluptas natus asperiores accusamus, repellendus rerum distinctio placeat tempore sapiente! Ipsa expedita illum autem facere beatae! Perferendis id magnam inventore debitis laborum illo necessitatibus, eligendi rerum accusantium.",
+    id: "obpfm00mo11hbccn1jpt8e5ugubang",
+  },
+];

@@ -43,7 +43,7 @@ const Navbar = () => {
                 $darkMode={darkMode}
               >
                 {" "}
-                <span>Soluciones</span>
+                <span>Consultorías</span>
               </StyledLink>
             </li>
             <li className="text-center" onClick={onChange}>

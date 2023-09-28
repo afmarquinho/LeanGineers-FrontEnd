@@ -57,7 +57,8 @@ const Formaciones = () => {
             FORMACIONES
           </Title>
         </Col>
-        <StyledCol xs={12} className="m-4 p-4">
+        <StyledCol xs={12} md={2} className="">
+          <h4 className="mb-5">Ejes Temáticos</h4>
           <Button
             className={`${innovacion ? "active" : " "}`}
             onClick={onInnovacion}
@@ -87,15 +88,17 @@ const Formaciones = () => {
             Tecnología
           </Button>
         </StyledCol>
-        {innovacion ? (
-          <InnovacionCurso />
-        ) : mejora ? (
-          <MejoraCurso />
-        ) : liderazgo ? (
-          <LiderazgoCurso />
-        ) : (
-          <TecnologiaCurso />
-        )}
+        <Col xs={12} md={10} className="">
+          {innovacion ? (
+            <InnovacionCurso />
+          ) : mejora ? (
+            <MejoraCurso />
+          ) : liderazgo ? (
+            <LiderazgoCurso />
+          ) : (
+            <TecnologiaCurso />
+          )}
+        </Col>
       </Row>
     </Container>
   );
@@ -111,19 +114,22 @@ const Title = styled.h3`
   text-transform: uppercase;
 `;
 const StyledCol = styled(Col)`
-  border-bottom: 2px solid black;
+
   .active {
-    border-bottom: 6px solid #3498db;
+    font-weight: bold;
   }
 `;
 const Button = styled.button`
+  width: 100%;
+  height: 4rem;
+  text-align: start;
+  padding: 0;
   color: ${(props) =>
     props.$darkMode ? props.theme.dark.textColor : props.theme.light.textColor};
   border: none;
-  border-bottom: 6px solid #cfd1d1b3;
-  padding: 2rem 3rem 1rem 3rem;
   background-color: transparent;
+  transition: all 0.5s ease;
   &:hover {
-    border-bottom: 6px solid #3498db;
+    font-weight: bold;
   }
 `;
